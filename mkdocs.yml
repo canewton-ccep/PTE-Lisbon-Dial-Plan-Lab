@@ -1,6 +1,6 @@
 ---
-site_name: "PVT26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" # This must begin with the session ID, e.g. LABXXX-1234 This is my Cisco Live Lab
-site_description: "PVT26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" # must be same as "site_name"
+site_name: "PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" # This must begin with the session ID, e.g. LABXXX-1234 This is my Cisco Live Lab
+site_description: "PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" # must be same as "site_name"
 site_author: Carl Newton
 copyright: Copyright &copy; 2026 Cisco
 theme:
