@@ -4,7 +4,9 @@
 !!! info
       This site represents your typical branch site with a cookie cutter requirement. Users with phones and Webex apps, that need access to PSTN via Cisco Calling Plans PSTN. The customer has variable length dial plan, and requires the users within this site to be able to dial each other using a 4 & 5 digit short dial, dialing the full PSTN number without country code, or using the full +E.164 number. Other users at other sites should be dialable using their 6 digit extensions. They also request to be able to dial 0 to reach a reception desk that is located at New York. The customer also has a requirement to route all calls to unknown extension numbers as internal calls over to a Unified Communications Manager based trunk to premises registered users. The reception desk and internal trunk will be configured later during the New York exercise.
 
-   ![](assets/docx-image-008.png)
+   ![San Jose call paths](assets/diagrams/01-san-jose-call-paths.png)
+
+   Colour key: pink = calls to/from UCM users, blue = Webex-to-Webex calls, orange = PSTN calls for Webex users, purple = PSTN calls for UCM users (Hybrid PSTN only); lit pipes show the path a call takes, and grey pipes aren't used.
 
 ## Configuration Steps
 

@@ -5,7 +5,7 @@
 !!! info
       This site is similar again to New York, aside from that PSTN here is accessed via the centralized SBC at New York. Because this site is in the same country as Site 2 – the PSTN dial plan is the same. Users at this site need to dial 0 for a reception desk but be connected to the reception at site 2. We already created an Org-wide Translation for this purpose, so no changes are necessary there. The customer also wishes that this site should have some restrictions around dialling 800 numbers. We can use outbound calling permissions for this purpose.
 
-![](assets/docx-image-180.png)
+![Dallas call paths](assets/diagrams/04-dallas-call-paths.png)
 
 ## Configuration Steps
 

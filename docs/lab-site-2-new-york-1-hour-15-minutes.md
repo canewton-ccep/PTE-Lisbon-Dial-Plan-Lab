@@ -6,7 +6,7 @@
 
       All PSTN connections at this site have been migrated to be delivered via cloud connect PSTN to Webex Calling, however, some users are still yet to be migrated from UCM and are still using Jabber registered to UCM. Calls will flow through Webex Calling, through the CUBE and on to UCM Registered users. We will migrate one such user from UCM Registration to Webex Calling registration during this section. Study the diagram below, and notice there are two PSTN Paths – one terminating at UCM users, one terminating at Webex Users.
 
-![](assets/docx-image-043.png)
+![New York call paths](assets/diagrams/02-new-york-call-paths.png)
 
 Local Gateway enables the connection between Webex Calling and on-premises infrastructure and/or PSTN providers physically delivered to the premises - this solution is also known as Premises-based PSTN – But it can be used for PSTN or internal calling. The picture below depicts such deployment:
 
@@ -207,7 +207,7 @@ Now we must check the trunk on Cisco UCM side to route calls between our on prem
 !!! info
       Our second user, Kellie Melby will initially reside on UCM as a Jabber user. The scenario here is that the PSTN has been ported from an on site E1/T1 connection to a cloud connected PSTN provider as the first step. PSTN is trunked through Webex Calling and on to UCM via the local gateway internal calls trunk. Users are then moved over gradually from UCM To Webex Calling.
 
-![](assets/docx-image-070.png)
+![Hybrid PSTN call paths for New York UCM users](assets/diagrams/03-hybrid-pstn-call-paths.png)
 
 !!! info 
       PSTN trunking offers the following benefits to your organization:

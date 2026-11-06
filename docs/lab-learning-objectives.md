@@ -31,4 +31,4 @@ We will be configuring four sites as part of this lab, as detailed in the below 
 | London | EMEA | Local GW @ NY | 44 |
 
 
-![](assets/image-3.png)
+![Calling solution design: all four sites, Webex Calling, and the trunks to CUBE and UCM](assets/diagrams/00-calling-solution-design.png)

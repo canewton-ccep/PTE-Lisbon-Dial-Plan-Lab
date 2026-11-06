@@ -4,7 +4,7 @@
 !!! info
       This site is similar to Dallas, aside from that this site exists in a different country, so we must cater for entirely different +E.164 dialing habits. This setup of US/UK will not be that common, but the concepts are important and common for sites in Europe where countries are geographically much closer and may share resources. We will need to create a new trunk on our local gateway to cater for the different E.164 dialing habits that this country has; again to allow for granularity of configuration changes. Because of the different country, the reception at this site is also physically located here, however users here still need to be able to dial 0 and hit this localized reception desk instead of the reception at New York. The customer also noted that many staff are mistakenly dialing the reception at New York using its 4-digit extension number that they found on some documentation, so they need to prevent this from occurring.
 
-![](assets/docx-image-223.png)
+![London call paths](assets/diagrams/05-london-call-paths.png)
 
 ## Configuration Steps
 
