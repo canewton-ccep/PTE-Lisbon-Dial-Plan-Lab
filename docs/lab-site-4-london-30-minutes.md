@@ -1,14 +1,14 @@
 # Lab Site 4 – London [ 30 Minutes]
 
-## Overview
+## 4.1 Overview {#overview}
 !!! info
       This site is similar to Dallas, aside from that this site exists in a different country, so we must cater for entirely different +E.164 dialing habits. This setup of US/UK will not be that common, but the concepts are important and common for sites in Europe where countries are geographically much closer and may share resources. We will need to create a new trunk on our local gateway to cater for the different E.164 dialing habits that this country has; again to allow for granularity of configuration changes. Because of the different country, the reception at this site is also physically located here, however users here still need to be able to dial 0 and hit this localized reception desk instead of the reception at New York. The customer also noted that many staff are mistakenly dialing the reception at New York using its 4-digit extension number that they found on some documentation, so they need to prevent this from occurring.
 
 ![London call paths](assets/diagrams/05-london-call-paths.png)
 
-## Configuration Steps
+## 4.2 Configuration Steps {#configuration-steps}
 
-### Add PSTN Numbers
+### 4.2.1 Add PSTN Numbers {#add-pstn-numbers}
 
 1\. Continuing on Workstation 1, Webex Control Hub. From Control Hub, Navigate to MANAGEMENT > Locations. On the **Locations** page select **London** location.
 
@@ -36,7 +36,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 7\. Click **Close** on the following page and you will be taken to the Numbers page where you can see all the numbers you have just added.
 
-### Assign Main Number
+### 4.2.2 Assign Main Number {#assign-main-number}
 
 !!! info
       Let's assign a main number to the location. Without this set, Webex Calling will not allow any outgoing calls.
@@ -49,7 +49,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 ![](assets/docx-image-230.png)
 
-### Configure Site Dial Plan Settings
+### 4.2.3 Configure Site Dial Plan Settings {#configure-site-dial-plan-settings}
 
 !!! info
       Now we must set our site routing prefix, the trunk for internal calls, and enforce outbound dial digit of 9 just like our previous sites to ensure things work as desired
@@ -70,7 +70,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 ![](assets/docx-image-234.png)
 
-### Assign numbers to users
+### 4.2.4 Assign numbers to users {#assign-numbers-to-users}
 
 !!! info
       For this site, our telephony users will be **Stefan Mauk & Ricardo Filice**. We must assign them the +E.164 numbers we just ordered.
@@ -99,7 +99,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 ![](assets/docx-image-239.png)
 
-### Create PSTN Trunk
+### 4.2.5 Create PSTN Trunk {#create-pstn-trunk}
 
 !!! info
       This site will access PSTN Via the gateway physically located at New York. For this, we should create an extra trunk for our EU Dial plan PSTN Calls. See the diagram below for the desired end state. Note that in this lab, there is no carrier side PSTN available so calls will not work; but we can still simulate our Webex Calling configuration and see the dial plan working from Webex Calling's perspective, delivering the call request to the gateway; where it will then fail because of a lack of onward PSTN Connection.
@@ -148,7 +148,7 @@ show sip-ua register status
      
 ![](assets/docx-image-246.png)
 
-### Assign PSTN Trunk as site PSTN Connection
+### 4.2.6 Assign PSTN Trunk as site PSTN Connection {#assign-pstn-trunk-as-site-pstn-connection}
 
 1\. Open your London location in control hub and go to the PSTN Tab  
 
@@ -164,7 +164,7 @@ show sip-ua register status
 
 ![](assets/docx-image-249.png)
 
-### Configure Reception Virtual Line
+### 4.2.7 Configure Reception Virtual Line {#configure-reception-virtual-line}
 
 !!! info
       The London site has its own physical reception that will be serviced by Stefan Mauk.
@@ -191,7 +191,7 @@ show sip-ua register status
 
 ![](assets/docx-image-254.png)
 
-### 0 For Local Reception
+### 4.2.8 0 For Local Reception {#0-for-local-reception}
 
 !!! challenge
       Users wish to be able to dial 0 for a local reception desk. Let's configure that now using a translation pattern.
@@ -217,7 +217,7 @@ show sip-ua register status
 
 ![](assets/docx-image-257.png)
 
-### Re-Route calls for New York Reception
+### 4.2.9 Re-Route calls for New York Reception {#re-route-calls-for-new-york-reception}
 
 !!! challenge
       This customer notes that users at London are mistakenly calling the 6 digit extension number for the New York reception as it was published on some internal documentation. The best solution is to add a translation pattern to redirect the calls to another destination. In this case, we will redirect calls made by London users to the New York reception, back to the London reception. Note we could also redirect calls to another user, or a number that doesn't exist to effectively block the call. You could also use outgoing call permission by digit pattern to simply block the call.
@@ -230,9 +230,9 @@ show sip-ua register status
 
 ![](assets/docx-image-259.png)
 
-## Test Calls
+## 4.3 Test Calls {#test-calls}
 
-### Outbound PSTN Calls
+### 4.3.1 Outbound PSTN Calls {#outbound-pstn-calls}
 
 1\. Open workstation 4 from dCloud  
 
@@ -297,7 +297,7 @@ terminal monitor
 
 ![](assets/docx-image-263.png)
 
-### 0 For Local Reception
+### 4.3.2 0 For Local Reception {#0-for-local-reception_1}
 
 !!! challenge
       Here, we will observe users from EU And US both dialling 0 and routing to the correct reception desk for them.
@@ -318,7 +318,7 @@ terminal monitor
 
 ![](assets/docx-image-266.png)
 
-### Redirection of New York Reception DN
+### 4.3.3 Redirection of New York Reception DN {#redirection-of-new-york-reception-dn}
 
 1\. Open control hub and navigate to PSTN & Routing > Numbers. Make a note of your New York Reception extension number.  
 

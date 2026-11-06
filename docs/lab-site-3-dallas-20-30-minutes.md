@@ -1,15 +1,15 @@
 # Lab Site 3 – Dallas [20-30 Minutes]
 
-## Overview
+## 3.1 Overview {#overview}
 
 !!! info
       This site is similar again to New York, aside from that PSTN here is accessed via the centralized SBC at New York. Because this site is in the same country as Site 2 – the PSTN dial plan is the same. Users at this site need to dial 0 for a reception desk but be connected to the reception at site 2. We already created an Org-wide Translation for this purpose, so no changes are necessary there. The customer also wishes that this site should have some restrictions around dialling 800 numbers. We can use outbound calling permissions for this purpose.
 
 ![Dallas call paths](assets/diagrams/04-dallas-call-paths.png)
 
-## Configuration Steps
+## 3.2 Configuration Steps {#configuration-steps}
 
-### Add PSTN Numbers
+### 3.2.1 Add PSTN Numbers {#add-pstn-numbers}
 
 1\. Continuing on Workstation 1, Webex Control Hub. From Control Hub, Navigate to MANAGEMENT > Locations. On the **Locations** page select **Dallas** location.
 
@@ -42,7 +42,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 8\. Click **Close** on the following page and you will be taken to the Numbers page where you can see all the numbers you have just added.
 
-### Assign Main Number
+### 3.2.2 Assign Main Number {#assign-main-number}
 
 1\. Continuing on Workstation 1, Webex Control Hub. Navigate to **MANAGEMENT** > **Locations**. On the locations page, choose **Dallas** location.   
 
@@ -54,7 +54,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 3\. Observe that as soon as you **Save** the **Main number** assignment, the warning will disappear, indicating now your location can make and receive calls.
 
-### Configure Site Dial Plan Settings
+### 3.2.3 Configure Site Dial Plan Settings {#configure-site-dial-plan-settings}
 
 !!! info
       Now we must set our site routing prefix, the trunk for internal calls, and enforce outbound dial digit of 9 just like our previous sites to ensure things work as desired
@@ -75,7 +75,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 ![](assets/docx-image-191.png)
 
-### Assign numbers to users
+### 3.2.4 Assign numbers to users {#assign-numbers-to-users}
 
 !!! info
       For this site, our telephony users will be **Rebekah Barretta**. We must assign them the +E.164 numbers we just ordered.
@@ -102,7 +102,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 ![](assets/docx-image-196.png)
 
-### Create PSTN Trunk
+### 3.2.5 Create PSTN Trunk {#create-pstn-trunk}
 
 !!! info
       This site will access PSTN Via the gateway physically located at New York. For this, we should create an extra trunk for our US Dial plan PSTN Calls. See the diagram below for the desired end state. We already configured our trunk for internal calls; Now we will configure a different trunk to use for PSTN calls. We will keep them separate in this deployment to allow for configuration granularity. We want to retain the ability to change settings on the PSTN Trunk for Dallas without potentially affecting internal calls for all users!
@@ -155,7 +155,7 @@ show sip-ua register status
 
 ![](assets/docx-image-204.png)
 
-### Assign PSTN Trunk as site PSTN Connection
+### 3.2.6 Assign PSTN Trunk as site PSTN Connection {#assign-pstn-trunk-as-site-pstn-connection}
 
 1\. Open your Dallas location in control hub and go to the PSTN Tab. Click Manage next to the PSTN Connection  
 
@@ -169,7 +169,7 @@ show sip-ua register status
 
 4\. Choose done (Add numbers later)
 
-### Outbound Calling Permissions by Digit Pattern
+### 3.2.7 Outbound Calling Permissions by Digit Pattern {#outbound-calling-permissions-by-digit-pattern}
 
 !!! challenge
       The customer wants to block all calls from this site to 1-800 numbers, except for Cisco TAC. We can do this using the **outbound calling permissions by digit pattern** functionality.
@@ -219,9 +219,9 @@ show sip-ua register status
 
 ![](assets/docx-image-218.png)
 
-## Test Calls
+## 3.3 Test Calls {#test-calls}
 
-### Outbound PSTN Calls
+### 3.3.1 Outbound PSTN Calls {#outbound-pstn-calls}
 
 1\. Go to workstation 3, and sign out Kellie Melby from Webex
 
@@ -287,13 +287,13 @@ terminal monitor
 
 7\. Now make a call to +18005532445. Note that you hear a system message stating “You are not able to make this call” and nothing appears on the local gateway; This is because Webex calling blocks the calls due to policy before forwarding to the PSTN. Be aware of this when troubleshooting call failures with Webex Calling, sometimes the cause can be at the Webex Calling level, and sometimes at the Local Gateway – Use verify call routing to know where to troubleshoot!
 
-### Dial 0 for Webex Calling Reception
+### 3.3.2 Dial 0 for Webex Calling Reception {#dial-0-for-webex-calling-reception}
 
 !!! challenge
       Now let’s test our 0 for reception pattern. Dial 0 from Rebekah’s Webex client and note the call gets delivered to Eric Steeles Webex client. I lied earlier! There are two sections in this lab with only a single step. Next time you test 0 for reception, we won’t be so lucky!
 
 ![](assets/docx-image-222.png)
 
-### Webex Calling To UCM Calls
+### 3.3.3 Webex Calling To UCM Calls {#webex-calling-to-ucm-calls}
 
 You can feel free to test dialing from Rebekah to Taylor Bard on UCM. DN 6026 or +E1.64 +12943216026. All the configuration is already in place to support these dialing habits!
