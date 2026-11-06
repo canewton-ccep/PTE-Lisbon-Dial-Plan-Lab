@@ -1,5 +1,5 @@
-# 0.2 Lab Access [2 Minutes] {#lab-access-2-minutes}
-## 0.2.1 Getting Started {#getting-started}
+# 0.2 Lab Access [2 Minutes] {: #lab-access-2-minutes }
+## 0.2.1 Getting Started {: #getting-started }
 1\. Open a browser on your laptop and go to <https://dcloud.cisco.com>
 
 2\. Click **Login** at the top right corner and log in with your Cisco.com credentials.
@@ -20,7 +20,7 @@
 
 8\. There are **two** ways you can access **Workstation 1**. You can either connect via a **local RDP connection** or via a **WebRDP connection** from your classroom laptop.
 
-## 0.2.2 Access Option (A) {#access-option-a}
+## 0.2.2 Access Option (A) {: #access-option-a }
 
 To connect to the Workstation using your **local RDP connection**, first, you need to connect to your lab session via **VPN**. Open **Cisco Secure Client app** on your laptop. It will prompt you for the **Host Address**, **username,** and **password** information for your session. You will find all these details under the **Info** > **Cisco Secure Client** section of your lab. Enter all the details as shown below and click **OK** to connect to your session. The **Host Address**, **username,** and **password** will be different for each lab. Use **YOUR OWN** assigned lab details.
 
@@ -34,7 +34,7 @@ Username: **dcloud\cholland**
 
 Password: **dCloud123!**
 
-## 0.2.3 Access Option (B) {#access-option-b}
+## 0.2.3 Access Option (B) {: #access-option-b }
 
 To access Workstation 1 over **WebRDP**, click on the **Workstation 1** icon on the topology page and when it brings up a fly-out window with workstation details. On the fly-out window go to click on the **Remote Access > Web RDP**. It will open a new browser tab and connect you to Workstation 1.
 

@@ -2,7 +2,7 @@
 
 This document will show you how to debug the calls through the local gateway and verify correct operation. Use this guide to troubleshoot your own implementations!
 
-## B.1 Step 1 – TLS Registration {#step-1-tls-registration}
+## B.1 Step 1 – TLS Registration {: #step-1-tls-registration }
  
 ```
 Show sip-ua connections tcp tls detail
@@ -11,7 +11,7 @@ This will verify the TLS Connection between LGW And Webex calling. If you do not
 
 ![A screenshot of a computer Description automatically generated](assets/bonus_docx-image-001.png)
 
-## B.2 Step 2 – SIP Trunk Registration {#step-2-sip-trunk-registration}
+## B.2 Step 2 – SIP Trunk Registration {: #step-2-sip-trunk-registration }
 
 ```
 show sip-ua register status
@@ -22,7 +22,7 @@ This will verify the SIP trunk between LGW and WxC is up. You can also check on 
 
 ![A screenshot of a computer Description automatically generated](assets/bonus_docx-image-003.png)
 
-## B.3 Step 3 – Dial Peer Selection {#step-3-dial-peer-selection}
+## B.3 Step 3 – Dial Peer Selection {: #step-3-dial-peer-selection }
 
 With the above steps completed, the next step is to debug the dial peers on the gateway itself to see what is happening. Issue the command
 ```
@@ -119,7 +119,7 @@ no vad</text>
 
 Once we have confirmed correct dial-peer selection, we can move on to SIP message debugging.
 
-## B.4 Step 4 – SIP Messages {#step-4-sip-messages}
+## B.4 Step 4 – SIP Messages {: #step-4-sip-messages }
 
 The final stage is the ensure the correct SIP Messages are being exchanged. For this, it’s useful to use a tool called translatorX <https://translatorx.org/downloads.html>
 
@@ -133,7 +133,7 @@ If you click the “Generate diagram” button in the bottom right, we can see a
 
 ![A screenshot of a computer Description automatically generated](assets/bonus_docx-image-006.png)
 
-## B.5 Longer Extension length and National numbers {#longer-extension-length-and-national-numbers}
+## B.5 Longer Extension length and National numbers {: #longer-extension-length-and-national-numbers }
 
 !!! curious
     With the inclusion of Extensions up to 10 digits, the chance for overlap on National PSTN numbering becomes more prevalent.​ If the extension exists on Webex Calling, the call will route to the extension number instead of PSTN. If the extension number exists over a Local Gateway trunk on UCM or similar, the call will route to PSTN instead of the extension number. Be aware the behaviour changes depending where the number resides!
@@ -143,7 +143,7 @@ If you click the “Generate diagram” button in the bottom right, we can see a
    PSTN inbound must be normalized to E164 inbound to Webex Calling. This is done automatically by Cloud Connected PSTN.​
    For LGW and Unknown routing to Premise enabled on a Trunk, a large extension length could lead to incorrect Call Classification of Premises and External Calls if E164 is not used for PSTN To and From. See [Calls to On-Premise Extensions Maximum Unknown Extension Length](https://help.webex.com/en-us/article/n0xb944/Configure-trunks,-route-groups,-and-dial-plans-for-Webex-Calling#Cisco_Task_in_List_GUI.dita_fe608e1f-2f05-4369-b758-4b1874b31a3c)
 
-## B.6 Dial Plan Behavior – Outside Access Codes & Translation Patterns {#dial-plan-behavior-outside-access-codes-translation-patterns}
+## B.6 Dial Plan Behavior – Outside Access Codes & Translation Patterns {: #dial-plan-behavior-outside-access-codes-translation-patterns }
 
 Consider the below diagram. Note that translation patterns will not be considered if the outbound dial digit has been previously stripped. As such, you should not translate from numbers, and to numbers that both include an outbound dial digit, as it only gets stripped once.
 
@@ -151,7 +151,7 @@ Consider the below diagram. Note that translation patterns will not be considere
 
 ![A screenshot of a diagram Description automatically generated](assets/bonus_docx-image-008.png)
 
-## B.7 Useful Debugging Commands {#useful-debugging-commands}
+## B.7 Useful Debugging Commands {: #useful-debugging-commands }
 !!! code
     Show sip-ua connections tcp tls detail<BR>
     Displays status of TCP connection<BR>

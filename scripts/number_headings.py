@@ -1,5 +1,7 @@
 """Number lab-guide headings (0.1, 1.2.3, 2.2.2a, B.4 ...) and pin each heading's original link id.
 
+Ids are written as `{: #id }` (not `{#id}`) because the macros plugin treats `{#` as a Jinja comment.
+
 Usage (from the repo root):
     python scripts/number_headings.py docs            # preview the numbering
     python scripts/number_headings.py docs --apply    # write it to the .md files
@@ -37,7 +39,7 @@ for fn, top, num_h1 in PAGES:
         if not m: continue
         lvl, text = len(m.group(1)), m.group(2)
         # re-run safe: strip a previous number and pinned id
-        pinned = re.search(r'\s*\{#([\w-]+)\}$', text)
+        pinned = re.search(r'\s*\{:?\s*#([\w-]+)\s*\}$', text)
         if pinned: text = text[:pinned.start()]
         text = re.sub(r'^(?:0\.\d+|[1-9B])(?:\.\d+){0,2}[a-z]?\s+(?=\S)', '', text) if pinned else text
         # mkdocs default id (with duplicate suffixes)
@@ -54,9 +56,9 @@ for fn, top, num_h1 in PAGES:
         else: h4 += 1; label = f'{top}.{h2}.{h3}{chr(96+h4)}'
         if label is None:
             print(f'{"  "*(lvl-1)}(unnumbered) {text}')
-            if pinned: lines[i] = f'{m.group(1)} {text} {{#{hid}}}'
+            if pinned: lines[i] = f'{m.group(1)} {text} {{: #{hid} }}'
             continue
-        new = f'{m.group(1)} {label} {text} {{#{hid}}}'
+        new = f'{m.group(1)} {label} {text} {{: #{hid} }}'
         print(f'{"  "*(lvl-1)}{label} {text}')
         lines[i] = new
     if APPLY: open(p, 'w', encoding='utf-8').write('\n'.join(lines))
