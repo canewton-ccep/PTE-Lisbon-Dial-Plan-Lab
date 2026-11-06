@@ -1,0 +1,2088 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration">
+      
+      
+        <meta name="author" content="Carl Newton">
+      
+      
+      
+        <link rel="prev" href="../lab-site-1-san-jose-20-30-minutes/">
+      
+      
+        <link rel="next" href="../lab-site-3-dallas-20-30-minutes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../template_assets/webex75.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>New York - PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-site-2-new-york-1-hour-15-minutes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" class="md-header__button md-logo" aria-label="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              New York
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-learning-objectives/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lab Preamble
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-access-2-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accessing Your Lab
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-1-san-jose-20-30-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  San Jose
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  New York
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-3-dallas-20-30-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dallas
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-4-london-30-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  London
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slido/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lab Survey
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-debug-calls-through-local-gateway/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Bonus Content
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" class="md-nav__button md-logo" aria-label="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab Preamble
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lab Preamble
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-learning-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mock Scenario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-access-2-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing Your Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-1-san-jose-20-30-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    San Jose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New York
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New York
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Configuration Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Configuration Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assign-main-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 Assign Main Number
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-internal-calling-trunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2 Configure Internal Calling Trunk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.2 Configure Internal Calling Trunk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webex-calling-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2a Webex Calling Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-internal-trunk-to-route-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2b Add Internal Trunk To Route Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucm-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2c UCM Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-numbers-to-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3 Assign numbers to users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.3 Assign numbers to users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webex-calling-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3a Webex Calling Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucm-user-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3b UCM User Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-site-routing-prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.4 Configure Site Routing Prefix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-reception-virtual-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.5 Configure Reception Virtual Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0-for-local-reception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.6 0 For Local Reception
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Test Calls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Test Calls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-pstn-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 Hybrid PSTN Calls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-user-extension-number-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 Hybrid User Extension Number Overlap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-ucm-user-to-webex-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3 Migrate UCM User To Webex Calling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webex-calling-inter-location-dialing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.4 Webex Calling Inter Location Dialing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dial-0-for-webex-calling-reception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.5 Dial 0 for Webex Calling Reception
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-webex-calling-ucm-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.6 Inter Webex Calling &amp; UCM Calls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3.6 Inter Webex Calling &amp; UCM Calls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unknown-extension-trunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.6a Unknown Extension Trunk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webex-calling-pstn-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.6b Webex Calling &amp; PSTN Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-unknown-extension-length-pstn-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.6c Maximum Unknown Extension Length &amp; PSTN Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-test-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.6d Real Test Calls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webex-calling-to-ucm-e164-call-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.6e Webex Calling To UCM E.164 Call Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-3-dallas-20-30-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dallas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-4-london-30-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    London
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab Survey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus Content
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bonus Content
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-debug-calls-through-local-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debug Local Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-site-2-new-york-1-hour-15-minutes">Lab Site 2 – New York [ 1 Hour 15 Minutes]</h1>
+<h2 id="overview">2.1 Overview</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This site is similar to Site 1, aside from that PSTN is accessed through the Cloud Connect For Webex Calling PSTN Type. This sends PSTN calls out through providers that partner with Webex. The site recently moved away from a centralized CUBE for PSTN Access as part of a modernization effort to move to the cloud. The CUBE still exists at this site and centralizes PSTN for other locations that have not moved yet; as well as providing internal calling between the legacy UCM And Webex Calling.</p>
+<p>All PSTN connections at this site have been migrated to be delivered via cloud connect PSTN to Webex Calling, however, some users are still yet to be migrated from UCM and are still using Jabber registered to UCM. Calls will flow through Webex Calling, through the CUBE and on to UCM Registered users. We will migrate one such user from UCM Registration to Webex Calling registration during this section. Study the diagram below, and notice there are two PSTN Paths – one terminating at UCM users, one terminating at Webex Users.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/diagrams/02-new-york-call-paths.png" data-title="New York call paths" data-desc-position="top"><img alt="New York call paths" src="../assets/diagrams/02-new-york-call-paths.png"></a></p>
+<p>Local Gateway enables the connection between Webex Calling and on-premises infrastructure and/or PSTN providers physically delivered to the premises - this solution is also known as Premises-based PSTN – But it can be used for PSTN or internal calling. The picture below depicts such deployment:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-044.png" data-title="Diagram showing support for third-party Local Gateway" data-desc-position="top"><img alt="Diagram showing support for third-party Local Gateway" src="../assets/docx-image-044.png"></a></p>
+<p>A Webex Calling trunk connects your Local Gateway to Webex. There are 2 types of Local Gateway trunking models:</p>
+<ul>
+<li>Registration-based trunk</li>
+<li>Certificate-based trunk</li>
+</ul>
+<p>In this lab activity, we will focus on the Registration-based model. In the interests of reducing the time taken and complexity of the lab, we will be using 3 Webex Calling registration based trunks. The maximum in production is 2 Webex Calling register trunks per CUBE platform. If you wish to have more than 2 trunks, you should use the Certificate based model, which supports up to 10.</p>
+<p>These are the main differences between the two models.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Registration Based</td>
+<td>Certificate Based</td>
+</tr>
+<tr>
+<td>Scaling  (number of  concurrent  calls)</td>
+<td>Up to 250 Per Trunk x 2 trunks</td>
+<td>More than 250 per trunk (Up to CUBE Platform limit) x 10 trunks</td>
+</tr>
+<tr>
+<td>Network Requirements</td>
+<td>CUBE can be located on  internal network behind  Internal NAT/Firewall</td>
+<td>CUBE must be reachable from the cloud –  External interface with Public IP or Static  NAT</td>
+</tr>
+<tr>
+<td>Certificates</td>
+<td>* No own CUBE cert needed * Local Gateway must trust Webex service’s certificate</td>
+<td>* Cube’s CA signed certificate signed by trusted Webex CA * Local Gateway must trust Webex service’s certificate</td>
+</tr>
+<tr>
+<td>Vendor Support</td>
+<td>Cisco Only</td>
+<td>3rd Party Support</td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>* Easier to deploy * Limited scale and sensitive to network impairments * Config validation from Control Hub</td>
+<td>* Additional requirements to deploy such as public IPv4 and cube cert must be CA signed * Higher scale and better resilience (each call is independent)</td>
+</tr>
+</tbody>
+</table>
+<p>For more details refer here <a href="https://help.webex.com/en-us/article/t9xctu/Get-started-with-Local-Gateway#local-gateway-trunking-models">https://help.webex.com/en-us/article/t9xctu/Get-started-with-Local-Gateway#local-gateway-trunking-models</a></p>
+<h2 id="configuration-steps">2.2 Configuration Steps</h2>
+<p>1. Continuing on Workstation 1, Webex Control Hub, go to <strong>MANAGEMENT</strong> &gt; <strong>Locations.</strong> On the locations page you will see some pre-created locations. Select the location <strong>New York</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-045.png" data-desc-position="top"><img alt="" src="../assets/docx-image-045.png"></a></p>
+<p>2. On <strong>New York</strong> location page go to <strong>PSTN</strong> tab. Select <strong>Configure PSTN Services</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-046.png" data-desc-position="top"><img alt="" src="../assets/docx-image-046.png"></a></p>
+<p>3. On the next page, click <strong>Manage</strong> for PSTN Configuration &gt; PSTN connection.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-047.png" data-desc-position="top"><img alt="" src="../assets/docx-image-047.png"></a></p>
+<p>4. It will take you to set up PSTN connection type for the <strong>New York</strong>. On the <strong>Edit PSTN connection for New York</strong> page select option Cloud Connected PSTN and click <strong>Next</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-048.png" data-desc-position="top"><img alt="" src="../assets/docx-image-048.png"></a></p>
+<p>5. On the next page, for <strong>Select a Provider</strong>, choose the Intelepeer provider, and click <strong>Next.</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-049.png" data-desc-position="top"><img alt="" src="../assets/docx-image-049.png"></a></p>
+<p>6. On the next page for <strong>Emergency Services Address</strong>, keep all default and click <strong>Save</strong>. If prompted click <strong>Apply</strong> for suggested address, then click <strong>Save</strong> again.</p>
+<p>7. On the next page, click <strong>Add Numbers Now</strong></p>
+<p>8. On the next page, leave the Location as <strong>New York</strong> and Number type as <strong>PSTN number</strong> and click <strong>Next.</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-050.png" data-desc-position="top"><img alt="" src="../assets/docx-image-050.png"></a></p>
+<div class="admonition webex">
+<p class="admonition-title">Webex</p>
+<p>The phone numbers for your pod should have been sent as a 1:1 message to the Webex Client of Charles Holland.  Check your messages there to find them.  If you have not yet got assigned phone numbers for this module reach out to of the proctors, they will help you.</p>
+</div>
+<p>9. On the next page populate two 10 digit phone numbers given/allocated to you. Click <strong>Save</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-051.png" data-desc-position="top"><img alt="" src="../assets/docx-image-051.png"></a></p>
+<p>10. On the next page click <strong>View numbers,</strong> it will take you to <strong>SERVICES</strong> &gt; <strong>PSTN &amp; Routing</strong> &gt; <strong>Numbers</strong> page, ensure both numbers are added and show the status <strong>Active</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-052.png" data-desc-position="top"><img alt="" src="../assets/docx-image-052.png"></a></p>
+<h3 id="assign-main-number">2.2.1 Assign Main Number</h3>
+<p>Now, we must assign a main number to the location. Without this set, Webex Calling will not allow any outgoing calls.</p>
+<p>1. Continuing on Workstation 1, Webex Control Hub. Navigate to <strong>MANAGEMENT</strong> &gt; <strong>Locations</strong>. On the locations page, choose <strong>New York</strong> location.</p>
+<p>2. On <strong>New York</strong> location page go to <strong>PSTN</strong> tab. On PSTN page, drop down the option for <strong>Main number</strong> and choose one of the available numbers. Click <strong>Save</strong>. The number will still be available for assignment whatever you wish to use it for!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-053.png" data-desc-position="top"><img alt="" src="../assets/docx-image-053.png"></a></p>
+<p>3. Observe that as soon as you Save the Main number assignment, the warning will disappear, indicating now your location can make and receive calls.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-054.png" data-desc-position="top"><img alt="" src="../assets/docx-image-054.png"></a></p>
+<h3 id="configure-internal-calling-trunk">2.2.2 Configure Internal Calling Trunk</h3>
+<p>The customer wishes that users are also able to dial back to an on premise UCM using 4-digit short dials and +E.164 numbers. This will be served using the CUBE that is physically located at this New York site. We created some automation for this lab to speed up the configuration process.</p>
+<h4 id="webex-calling-config">2.2.2a Webex Calling Config</h4>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>There are some scripts that you are about to run, they have similar names but do very different things.  Take care to only run the correct ones, as they add configuration and will cost you time to back out if you run the wrong ones.  Check the name twice before running it!</p>
+</div>
+<p>1. Continuing on workstation1, minimize all applications. Find the PowerShell script named <strong><em>LTRCOL2006_dp_add_internal_trunk.ps1</em></strong> . Right click on the file and choose <strong>Run with PowerShell</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-055.png" data-desc-position="top"><img alt="" src="../assets/docx-image-055.png"></a></p>
+<p>The PowerShell script will add a trunk to Webex Control Hub, capture the trunk details and create a configuration file for the Local Gateway (CSR8000v) in a text file so you can just copy and paste entire configuration on the gateway.</p>
+<p>2. It will open a PowerShell window and execute the script. Once the script is executed the script window will close automatically and a configuration file will be created on the Workstation 1 Desktop called <strong>InternalcallsLGW_Config-Ready.txt</strong>.</p>
+<p>3. Double click and open the file.</p>
+<p>4. Now, open Putty from task bar and connect to the Local Gateway at 198.18.133.227 over SSH, using credentials - username: <strong>admin</strong> and password: <strong>dCloud123!</strong></p>
+<p>Now go to the text file <strong>InternalcallsLGW_Config-Ready.txt</strong> and copy the entire configuration and paste (right click anywhere on Putty window). All the configuration will be applied onto the Local Gateway. Scroll up on the Putty window and make sure there are no error messages.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-056.png" data-desc-position="top"><img alt="" src="../assets/docx-image-056.png"></a></p>
+<p>5. Wait for 2 minutes, then run the following command on Putty window to confirm the TLS session from Local Gateway to Webex Cloud.</p>
+<div class="highlight"><pre><span></span><code>show sip-ua connection tcp tls detail
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-057.png" data-desc-position="top"><img alt="" src="../assets/docx-image-057.png"></a></p>
+<p>6. You should see an active TLS connection established. The 150.X.X.X subnet belongs to Webex.</p>
+<p>7. Now issue the following command, and check the registration is shown as <strong><em>yes</em></strong>  </p>
+<div class="highlight"><pre><span></span><code>show sip-ua register status
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-058.png" data-desc-position="top"><img alt="" src="../assets/docx-image-058.png"></a></p>
+<p>8. Now open control hub, navigate to PSTN &amp; Routing, Gateway Configurations and then Trunk. Notice that the IntCal trunk is now showing online, because we completed the registration on the Local Gateway.  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-059.png" data-desc-position="top"><img alt="" src="../assets/docx-image-059.png"></a></p>
+<h4 id="add-internal-trunk-to-route-group">2.2.2b Add Internal Trunk To Route Group</h4>
+<div class="admonition curious">
+<p class="admonition-title">Curious</p>
+<p>We always recommend assigning a Route Group to a Location instead of a trunk directly. This is because when you assign a Route Group to a Location, and you need to add more trunks there will be no impact on the service. Our script we ran earlier created our trunk, now we just have to add it to a route group.</p>
+</div>
+<p>1. From Control Hub, Select <strong>PSTN &amp; Routing &gt;</strong> <strong>Gateway Configurations &gt; Route Group</strong> and create a new one  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-060.png" data-desc-position="top"><img alt="" src="../assets/docx-image-060.png"></a></p>
+<p>2. Name it RG_Internal – When we ran the powershell script earlier, a new trunk was created in control hub via automation named IntCal. We need to add this newly created trunk to the route group by dropping down the list and selecting it.  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-061.png" data-desc-position="top"><img alt="" src="../assets/docx-image-061.png"></a></p>
+<p>3. <strong>Note:</strong> We have not assigned this route group for use for anything just yet. We will do this later as part of some testing scenarios.</p>
+<p>This completes the Webex Calling side config of the trunk for internal calls. </p>
+<div class="admonition curious">
+<p class="admonition-title">Curious</p>
+<p>Note that we used DPG matching in our scripts here, but we do not use DPG Matching on dial peers with Webex Calling Survivability active. Bear this in mind if configuring for your customers! Check the <a href="https://help.webex.com/en-us/article/w0qmeu/Colocation-of-Local-Gateway-and-Site-Survivability-on-Cisco-IOS-Managed-Gateways">configuration guide</a> for more information.</p>
+</div>
+<h4 id="ucm-config">2.2.2c UCM Config</h4>
+<p>Now we must check the trunk on Cisco UCM side to route calls between our on premise solution and Webex Calling solution. This trunk on Cisco UCM is already created for you to save time, but we will observe the important settings.</p>
+<p>1. Continuing on Workstation, bring up Chrome browser. On the browser open a new tab and navigate to <strong>Collaboration Admin Links</strong> &gt; <strong>Cisco Unified Communications Manager</strong>. Log in with the credentials <strong>administrator</strong> and <strong>dCloud123!</strong></p>
+<p>2. Once logged in, go to <strong>System</strong> &gt; <strong>Security</strong> &gt; <strong>SIP Trunk Security Profile</strong>. <br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-062.png" data-desc-position="top"><img alt="" src="../assets/docx-image-062.png"></a></p>
+<p>3. Click <strong>Find</strong> to list all available SIP Trunk Security Profiles. Select <strong>LGW-Security-Profile</strong> and make sure the <strong>Incoming Port</strong> is configured as <strong>5065</strong>. You’ll see the significance of this later, once we start to debug the gateway.  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-063.png" data-desc-position="top"><img alt="" src="../assets/docx-image-063.png"></a></p>
+<p>4. Now, navigate to <strong>Device</strong> &gt; <strong>Trunk.</strong> Click to list all available Trunks. Select the <strong>LGW-SIP-Trunk</strong> from the available trunks. On the trunk page, verify that Service Status shows as <strong>Full Service</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-064.png" data-desc-position="top"><img alt="" src="../assets/docx-image-064.png"></a></p>
+<p>5. Now, scroll down on trunk page to the section SIP Information and make sure that the destination address is populated, <strong>and the destination port is set to 5060</strong>. Observe that the SIP trunk Trunk security Security profile Profile is selected as LGW-Security-Profile that specifies an incoming port of 5065 is applied. This actually serves to allow Local Gateway to identify calls from UCM using a match against port 5065; The SIP Trunk security profile configuration on the UCM sets the source port of the SIP Invites to 5065 for outgoing calls from UCM. We will see this in practice later on. Multiple SIP Trunk security profiles can be set to identify different ports for different trunks for different purposes (E.g 5065 for US Internal calls, 5066 for EU Internal calls and so on)</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-065.png" data-desc-position="top"><img alt="" src="../assets/docx-image-065.png"></a></p>
+<h3 id="assign-numbers-to-users">2.2.3 Assign numbers to users</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For this site, our telephony users will be <strong>Kellie Melby</strong> and <strong>Eric Steele</strong>. We must assign them the +E.164 numbers we just ordered. Eric will represent a user that has been fully migrated to Webex Calling after the switch over to cloud connected PSTN. Kellie will represent a user that has been migrated to Cloud Connected PSTN, but has not been moved off of UCM Just yet.</p>
+</div>
+<h4 id="webex-calling-configuration">2.2.3a Webex Calling Configuration</h4>
+<p>1. Continuing on Workstation 1, Webex Control Hub. Navigate to <strong>MANAGEMENT &gt; Users.</strong> On Users page, choose user <strong>Eric Steele</strong>.</p>
+<p>2. On the user summary page, scroll down a little and click <strong>Edit Licenses</strong></p>
+<p>3. On Edit services for <strong>esteele@cbXXX.dc-YY.com</strong> page, observe that no “Webex calling professional” license is assigned. Click the <strong>Edit Licenses</strong> button</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-066.png" data-desc-position="top"><img alt="" src="../assets/docx-image-066.png"></a></p>
+<p>4. On the next page, go to <strong>Calling</strong> tab, check mark options for <strong>Webex Calling</strong> and <strong>Professional</strong> and click <strong>Save.</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-067.png" data-desc-position="top"><img alt="" src="../assets/docx-image-067.png"></a></p>
+<p>5. On the next page, drop down the option for <strong>Location</strong> and choose <strong>New York</strong>. Now drop down the option for <strong>Phone Number</strong> and choose one of the available phone numbers. Make sure you assign last <strong><em>four</em></strong> digits of the DID number as extension number.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-068.png" data-desc-position="top"><img alt="" src="../assets/docx-image-068.png"></a></p>
+<p>6. Once the user is assigned the DID number, navigate to SERVICES &gt; PSTN &amp; Routing. On the Numbers page observe that New York number would not have site routing code. We will configure in the next module.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-069.png" data-desc-position="top"><img alt="" src="../assets/docx-image-069.png"></a></p>
+<h4 id="ucm-user-configuration">2.2.3b UCM User Configuration</h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Our second user, Kellie Melby will initially reside on UCM as a Jabber user. The scenario here is that the PSTN has been ported from an on site E1/T1 connection to a cloud connected PSTN provider as the first step. PSTN is trunked through Webex Calling and on to UCM via the local gateway internal calls trunk. Users are then moved over gradually from UCM To Webex Calling.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/diagrams/03-hybrid-pstn-call-paths.png" data-title="Hybrid PSTN call paths for New York UCM users" data-desc-position="top"><img alt="Hybrid PSTN call paths for New York UCM users" src="../assets/diagrams/03-hybrid-pstn-call-paths.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>PSTN trunking offers the following benefits to your organization:</p>
+<p><strong>Cloud PSTN migration before user migration</strong>—Organizations can transition their PSTN connectivity to the cloud before moving users to Webex Calling. This phased approach results in simplifying network architecture and lowering the cost.</p>
+<p><strong>Reduced infrastructure costs</strong>—Eliminates the need for multiple on-premises gateways and PSTN circuits, simplifying network architecture that lowers the cost.</p>
+<p><strong>Simplified integration with vertical applications</strong>—Makes it easier to connect specialized applications, such as financial turrets, nurse call system, and others, directly to the cloud PSTN without complex configurations.</p>
+<p><strong>Unified dial plan</strong>—Consistent extension and dial plan management across all sites and applications.</p>
+<p>For more information on this feature, see the <a href="https://help.webex.com/en-us/article/x3f0tm/PSTN-trunking-for-hybrid-Webex-Calling-deployments">help.webex.com</a> article.</p>
+</div>
+<p>1. On workstation 1, open chrome and click Collaboration Admin links, then open the UCM. Login with administrator/dCloud123!<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-071.png" data-desc-position="top"><img alt="" src="../assets/docx-image-071.png"></a></p>
+<p>2. Choose Device &gt; Phone<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-072.png" data-desc-position="top"><img alt="" src="../assets/docx-image-072.png"></a></p>
+<p>3. We don’t want you to forget your UCM Administration skills, so we will create all of the UCM config to be used here. Search for device names beginning with CSF, and then super copy the CSFTBARD device<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-073.png" data-desc-position="top"><img alt="" src="../assets/docx-image-073.png"></a></p>
+<p>4. Give the device a name of CSFKMELBY And save<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-074.png" data-desc-position="top"><img alt="" src="../assets/docx-image-074.png"></a></p>
+<p>5. Now adjust the following parameters to suit your user and save</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Kellie Melby</td>
+</tr>
+<tr>
+<td><strong>Owner User ID</strong></td>
+<td>Kmelby</td>
+</tr>
+<tr>
+<td><strong>Mobility User ID</strong></td>
+<td>kmelby</td>
+</tr>
+</tbody>
+</table>
+<p>6. Now click on line 1 – 6026 in Base_PT<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-075.png" data-desc-position="top"><img alt="" src="../assets/docx-image-075.png"></a></p>
+<p>7. Adjust the directory number to match the full +E.164 you have for this site in control hub. Ensure you prefix it with a \ character. Tab out of the field, and allow the page to refresh.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-076.png" data-desc-position="top"><img alt="" src="../assets/docx-image-076.png"></a></p>
+<p>8. Change all fields on the page that specify Taylor Bard to read Kellie Melby, and save the config.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-077.png" data-desc-position="top"><img alt="" src="../assets/docx-image-077.png"></a></p>
+<p>9. Next, add click the “<strong>Add</strong> <strong>Enterprise Alternate Number</strong>” button and use a number mask of 43<strong>YYYY</strong> – Where YYYY is the last four digits of <strong>Charles Hollands number.</strong> We are configuring a simulated extension number overlap here between a UCM User and a Webex Calling user, which we will test later. Remember to set your Route Partition too!  </p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You must switch out the XXXX in the screenshot below when you configure this Enterprise Alternate number! Do not just type X's into the box, switch out the X's to <strong>Match the last four digits of Charles full number</strong> </p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/image-2.png" data-desc-position="top"><img alt="" src="../assets/image-2.png"></a></p>
+<p>10. Now select User Management &gt; End user.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-079.png" data-desc-position="top"><img alt="" src="../assets/docx-image-079.png"></a></p>
+<p>11. Search for Kellie and open her profile. Click on the Device Association button.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-080.png" data-desc-position="top"><img alt="" src="../assets/docx-image-080.png"></a></p>
+<p>12. Search for the device, tick the box next to it and save the changes.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-081.png" data-desc-position="top"><img alt="" src="../assets/docx-image-081.png"></a></p>
+<p>13. In the top right of the screen, click the <strong>Go</strong> button next to <strong>Back to user</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-082.png" data-desc-position="top"><img alt="" src="../assets/docx-image-082.png"></a></p>
+<p>14. Scroll down on the page, set the primary extension and then save the end user configuration<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-083.png" data-desc-position="top"><img alt="" src="../assets/docx-image-083.png"></a></p>
+<p>15. Kellie’s Jabber configuration is now complete! Next, we must configure Webex Calling &amp; UCM to trunk calls to her number through the trunk we created earlier; Both inbound and outbound. The users existing calling search space routes their PSTN calls out through the regular CUBE Route list. We need to send calls out through the Webex Calling Local Gateway Trunk. Click on <strong>Call Routing &gt; Class Of Control &gt; Partition</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-084.png" data-desc-position="top"><img alt="" src="../assets/docx-image-084.png"></a></p>
+<p>16. Add a new partition as follows<br>
+</p><div class="highlight"><pre><span></span><code>P_CloudPSTN, Partition for Cloud PSTN Calls
+</code></pre></div><p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-085.png" data-desc-position="top"><img alt="" src="../assets/docx-image-085.png"></a></p>
+<p>17. Click on <strong>Call Routing &gt; Class Of Control &gt; Calling Search Space</strong> and add a new one with the following properties. You’ll need to scroll down on the Available Partitions list. Click <strong>Save</strong><br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-086.png" data-desc-position="top"><img alt="" src="../assets/docx-image-086.png"></a></p>
+<p>18. Open <strong>Device &gt; Phone</strong> and open the <strong>csfkmelby</strong> device<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-087.png" data-desc-position="top"><img alt="" src="../assets/docx-image-087.png"></a></p>
+<p>19. Set the Phone <strong>Calling Search Space</strong> to <strong>CSS-CloudPSTN</strong>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-088.png" data-desc-position="top"><img alt="" src="../assets/docx-image-088.png"></a></p>
+<p>20. Click on Line 1 in the top left<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-089.png" data-desc-position="top"><img alt="" src="../assets/docx-image-089.png"></a></p>
+<p>21. Adjust the phone <strong>Calling Search Space</strong> to <strong>CSS-CloudPSTN</strong> and click save
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-090.png" data-desc-position="top"><img alt="" src="../assets/docx-image-090.png"></a></p>
+<p>22. Click on <strong>Call Routing &gt; Route/Hunt &gt; Route Pattern</strong>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-091.png" data-desc-position="top"><img alt="" src="../assets/docx-image-091.png"></a></p>
+<p>23. We need to create a route pattern to point PSTN Calls over the Webex Calling Trunk. Copy the route pattern for <strong>OUTBOUND DIALLING – US</strong> – The copy button is on the far right<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-092.png" data-desc-position="top"><img alt="" src="../assets/docx-image-092.png"></a></p>
+<p>24. Adjust the parameters as follows ensuring the highlighted areas match the image. Click Save and OK on the subsequent two screens.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-093.png" data-desc-position="top"><img alt="" src="../assets/docx-image-093.png"></a></p>
+<p>25. Now, we need to configure control hub to send calls inbound from Cloud PSTN over the trunk to UCM to route to Kellie. From control hub, Navigate to <strong>PSTN &amp; Routing &gt; Gateway Configurations &gt; Route Lists</strong>. Click on <strong>Create Route List</strong>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-094.png" data-desc-position="top"><img alt="" src="../assets/docx-image-094.png"></a></p>
+<p>26. Add your route list with the following configuration settings, and click Create<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-095.png" data-desc-position="top"><img alt="" src="../assets/docx-image-095.png"></a></p>
+<p>27. You will be presented with a screen to add PSTN DID’s to the route list. Select the one that you have available – This tells Webex Calling to send this number over the trunk to UCM. You can add up to 100 numbers at a time manually, and it is also possible to add them in bulk via CSV. <strong>Add your number and click Add</strong><br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-096.png" data-desc-position="top"><img alt="" src="../assets/docx-image-096.png"></a></p>
+<h3 id="configure-site-routing-prefix">2.2.4 Configure Site Routing Prefix</h3>
+<p>1. Continuing on Workstation 1, Webex Control Hub. Let's define the <strong>Routing Prefix</strong> for <strong>New York</strong> location. On <strong>Webex Control Hub</strong> go to <strong>MANAGEMENT</strong> &gt; <strong>Locations</strong>.</p>
+<p>2. On the locations page select location <strong>New York</strong>. On <strong>New York</strong> location page go to <strong>Calling</strong> tab. On the Calling tab go to <strong>Dialing</strong> &gt; <strong>Internal dialing</strong>. Configure <strong>Routing prefix</strong> as <strong>43</strong>, click <strong>Save</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-097.png" data-desc-position="top"><img alt="" src="../assets/docx-image-097.png"></a></p>
+<p>3. Once you have added routing prefix, all users extension numbers location will be updated with respective routing prefix. To verify users extensions have been updated, on the Control Hub, go to <strong>SERVICES</strong> &gt; <strong>PSTN &amp; Routing</strong> and observe under <strong>Numbers</strong> tab that user extensions are updated with respective <strong>Route prefixes</strong>. Route list numbers are not.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-098.png" data-desc-position="top"><img alt="" src="../assets/docx-image-098.png"></a></p>
+<h3 id="configure-reception-virtual-line">2.2.5 Configure Reception Virtual Line</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The New York site has a physical reception that will be serviced by <strong>Eric Steele</strong>. However, the PSTN Number itself is taken from the <strong>San Jose</strong> site, as the reception used to be based there until some reorganization took place a few months ago. Let’s go ahead and create the new virtual line and assign it to Eric.</p>
+</div>
+<p>1. Continuing on Workstation 1, Webex Control Hub. Navigate to <strong>SERVICES</strong> &gt; <strong>Calling</strong>. On the Calling page go to <strong>Virtual Lines</strong> tab. On the Virtual Lines page, click <strong>Create</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-099.png" data-desc-position="top"><img alt="" src="../assets/docx-image-099.png"></a></p>
+<p>2. It will take you to <strong>Add virtual line</strong> page. Populate the following and click <strong>Add</strong>.</p>
+<ul>
+<li>First Name: <strong>New York</strong></li>
+<li>Last Name: <strong>Reception</strong></li>
+<li>Location: Drop down and choose <strong>San Jose</strong>.</li>
+<li>Phone Number: Choose a number from <strong>San Jose</strong> (From drop down you should see only one phone number available).</li>
+<li>Extension: Enter last four digits of Phone number (in this example 5744) <strong>Make a note of the extension, you will need it later.</strong></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-100.png" data-desc-position="top"><img alt="" src="../assets/docx-image-100.png"></a></p>
+<p>3. It will create the new virtual line, now we need to assign this line to a user. Click <strong>Assign</strong>.</p>
+<p>4. On the next page click <strong>Assign device</strong>, it will bring Select device drop down option. Drop down the option and choose <strong>Eric Steele</strong>. Click <strong>Assign.</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-101.png" data-desc-position="top"><img alt="" src="../assets/docx-image-101.png"></a></p>
+<p>5. On the next page, keep all default values and click <strong>Save</strong>. Observe that you have options to configure the line layout, line Label and call decline policy etc.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-102.png" data-desc-position="top"><img alt="" src="../assets/docx-image-102.png"></a></p>
+<h3 id="0-for-local-reception">2.2.6 0 For Local Reception</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Users wish to be able to dial 0 for a local reception desk. Let’s configure that now using a translation pattern.</p>
+</div>
+<p>1. Continuing on Workstation 1, Webex Control Hub, navigate to SERVICES &gt; PSTN &amp; Routing &gt; Gateway Configurations &gt; Translation Pattern tab. Click <strong>Create Translation Pattern</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-103.png" data-desc-position="top"><img alt="" src="../assets/docx-image-103.png"></a></p>
+<p>2. On the next page, keep the radio button selected for Organization and populate the following values and click <strong>Create</strong>.</p>
+<ul>
+<li>Name: Global Reception</li>
+<li>Matching Pattern: 0</li>
+<li>Replacement Pattern: 42XXXX (42 is the Site code for San Jose and XXXX is the extension number of Virtual Line you just created. In this example it will be 425744)</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-104.png" data-desc-position="top"><img alt="" src="../assets/docx-image-104.png"></a></p>
+<h2 id="test-calls">2.3 Test Calls</h2>
+<h3 id="hybrid-pstn-calls">2.3.1 Hybrid PSTN Calls</h3>
+<p>First, lets test the calls to and from our UCM User using Hybrid PSTN and see this working.</p>
+<p>1. Open Workstation 3 and open the Jabber client. Sign in with the user ID <a href="mailto:kmelby@cbXXX.dc-xx.com">kmelby@cbXXX.dc-xx.com</a><br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-105.png" data-desc-position="top"><img alt="" src="../assets/docx-image-105.png"></a></p>
+<p>2. On the next screen, enter the username <strong>kmelby</strong> and password <strong>dCloud123!</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-106.png" data-desc-position="top"><img alt="" src="../assets/docx-image-106.png"></a></p>
+<p>3. Once signed in, confirm you see Jabber green &amp; registered with the number assigned to you by your proctor for Cloud PSTN.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-107.png" data-desc-position="top"><img alt="" src="../assets/docx-image-107.png"></a></p>
+<p>4. Open your putty client on the desktop and connect to the local gateway on 198.18.133.227. Log in with the username <strong>Admin/dCloud123!</strong> Then enter the commands as follows:<br>
+   terminal monitor<br>
+   debug ccsip messages  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-108.png" data-desc-position="top"><img alt="" src="../assets/docx-image-108.png"></a></p>
+<p>5. Make a call from your jabber client to Cisco TAC by dialling +18005532447. Once the call is connected, hang up and inspect the logs on the gateway. Look for the inbound call from UCM SIP Trunk</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>From: "Kellie Melby" sip:+17206470845@198.18.133.4;tag=6302~166e7111-890f-42b6-afa8-1bcd50aa0a1e-25177042</p>
+</div>
+<div class="highlight"><pre><span></span><code>Received:
+INVITE sip:18005532447@198.18.133.227:5060 SIP/2.0
+Via: SIP/2.0/TCP 198.18.133.4:5065;branch=z9hG4bK187a45d86775
+From: "Kellie Melby" sip:+17206470845@198.18.133.4;tag=6302~166e7111-890f-42b6-afa8-1bcd50aa0a1e-25177042
+To: sip:18005532447@198.18.133.227
+Date: Thu, 10 Sep 2026 08:54:23 GMT
+Call-ID: 36ae4f00-1f21caf8-187a-48512c6@198.18.133.4
+Supported: timer,resource-priority,replaces
+Min-SE: 1800
+User-Agent: Cisco-CUCM14.0
+</code></pre></div>
+<p>And the outbound call from the CUBE to Webex Calling  </p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>INVITE &lt;sip:18005532447@40462196.cisco-bcld.com:5061 SIP 2.0</p>
+</div>
+<div class="highlight"><pre><span></span><code>Sent:
+INVITE &lt;sip:18005532447@40462196.cisco-bcld.com:5061 SIP 2.0
+Via: SIP/2.0/TLS 198.18.1.227:5070;branch=z9hG4bK4C8C71
+From: "Kellie Melby" &lt;sip:+17206470845@40462196.ciscobcld.com;otg=intcal2112036796\_lgu&gt;;tag=80B7122-BAE
+To: &lt;sip:18005532447@40462196.cisco-bcld.com&gt;
+Date: Thu, 10 Sep 2026 08:54:17 GMT
+Call-ID: A426BE2-AC2C11F1-8E83C856-E935BF30@198.18.1.227
+Supported: 100rel,timer,resource-priority,replaces
+</code></pre></div>
+<p>6. This completes the testing for our outbound call leg from UCM, through Webex Calling and out to our Cloud PSTN Provider. Now lets test inbound. Issue the show run command and scroll using space bar until you see the configuration that looks something like the below. The bold part will change in your deployment. This command identifies the trunk we configured earlier.
+</p><pre><code>
+voice class uri 301 sip
+pattern dtg=<text style="color:red;">intcal2112036796_lgu
+</text></code></pre><p></p>
+<p>7. Make a call from your cellphone to Kellie’s PSTN number, and check the debugs on the gateway again. Notice the highlighted area in red – this identifies the trunk the call was received on.  </p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>transport=tls;dtg=intcal2112036796_lgu SIP/2.0</p>
+</div>
+<div class="highlight"><pre><span></span><code>Received:
+INVITE sip:+17206470845@198.18.1.227:5070;transport=tls;dtg=intcal2112036796_lgu SIP/2.0
+Via:SIP/2.0/TLS 144.196.250.30:8934;branch=z9hG4bKBroadworksSSE.-64.100.13.26V44034-0-100-1909562606-1789030815502-
+From:"Carl Newton"&lt;sip:+442045202476@144.196.250.30;user=phone&gt;;tag=1909562606-1789030815502-
+To:&lt;sip:+17206470845@40462196.cisco-bcld.com;user=phone&gt;
+</code></pre></div>
+<p>8. Now find the configuration that looks like this. This command associates the trunk identifier above with this dial peer – so it gets selected as the incoming dial peer when we receive a call from Webex destined for the UCM User as their PSTN connection. At this point, it is is an internal call between systems.   </p>
+<pre><code>
+dial-peer voice 300 voip
+description WxC Side Internal Dial Peer for UCM&lt;&gt;WxC Flow
+max-conn 250
+destination-pattern BAD.BAD
+session protocol sipv2
+session target sip-server
+destination dpg 301
+<text style="color:red;">incoming uri request 301</text>
+voice-class codec 99
+voice-class stun-usage 200
+no voice-class sip localhost
+voice-class sip tenant 300
+dtmf-relay rtp-nte
+srtp
+no vad
+</code></pre>
+
+<h3 id="hybrid-user-extension-number-overlap">2.3.2 Hybrid User Extension Number Overlap</h3>
+<p>Earlier we configured Kellie to have extension number overlap with a user on Webex Calling. Lets take some time to look at how this affects users at different sites.</p>
+<p>1. Open Workstation 2 and ensure Webex is logged in as Eric Steele</p>
+<p>2. Dial the 4 digit number for Kellie Melby. It’s reasonable to expect that Eric would want to contact Kellie and not Charles, seeing as they work at the same office. Notice the call is actually delivered to Charles Holland since we have extension number overlap! Webex Calling is only aware of Charles Holland having this extension number locally.</p>
+<p>3. From control hub, click on <strong>Calling &gt; Settings</strong> and toggle the <strong>“allow extension number dialling between locations”</strong> to off. Click <strong>Save.</strong> <br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-109.png" data-desc-position="top"><img alt="" src="../assets/docx-image-109.png"></a></p>
+<p>4. Try our call again from Eric Steele, Workstation 2. Notice our call now fails, since we disallowed dialling between sites. Webex calling now only searches Eric Steeles local site for a match, and it does not find one because Kellie is registered to UCM.</p>
+<p>5. Open <strong>Locations &gt; New York</strong> then click on <strong>Calling &gt; Internal Dialing</strong>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-110.png" data-desc-position="top"><img alt="" src="../assets/docx-image-110.png"></a></p>
+<p>6. Set the <strong>Calls to on-premises</strong> <strong>extensions</strong> parameter to enabled, and select our internal Route Group. This tells Webex calling to route anything it doesn’t recognize over the trunk you select, effectively routing calls for this use case over to UCM.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-111.png" data-desc-position="top"><img alt="" src="../assets/docx-image-111.png"></a></p>
+<p>7. Now dial the full 6 digit number for Kellie from Eric Steeles Webex client. You should see the call arrive at Kellies Jabber client. Our calls are routing properly! But there is a little more to do.</p>
+<p>8. If we dial the four digit number from Eric Steele, the call will get delivered to UCM – but we configured the 6 digit extension on Kellie’s Jabber client. We need to configure a translation pattern to account for this. We could just add a translation pattern for Kellie’s specific DN, but let’s make it scalable. Log into UCM And click on <strong>Call Routing &gt; Class Of Control &gt; Partition</strong> and add a new one.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-112.png" data-desc-position="top"><img alt="" src="../assets/docx-image-112.png"></a></p>
+<p>9. Configure it as follows and click <strong>Save</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-113.png" data-desc-position="top"><img alt="" src="../assets/docx-image-113.png"></a></p>
+<p>10. Click on <strong>Call Routing &gt; Class Of Control &gt; Calling Search Space</strong> and add a new one.
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-114.png" data-desc-position="top"><img alt="" src="../assets/docx-image-114.png"></a></p>
+<p>11. Configure it with the following settings, ensuring the Site Xlat partition is on top. Click <strong>Save</strong><br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-115.png" data-desc-position="top"><img alt="" src="../assets/docx-image-115.png"></a></p>
+<p>12. Add another calling search space as follows<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-116.png" data-desc-position="top"><img alt="" src="../assets/docx-image-116.png"></a></p>
+<p>13. Select <strong>Device &gt; Trunk</strong> , Click <strong>Find</strong> and open the Webex Calling LGW Trunk.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-117.png" data-desc-position="top"><img alt="" src="../assets/docx-image-117.png"></a></p>
+<p>14. Scroll down the the <strong>Inbound Calls</strong> section and change the <strong>Calling Search Space</strong> to your new InboundGW CSS. Click <strong>Save</strong> <br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-118.png" data-desc-position="top"><img alt="" src="../assets/docx-image-118.png"></a></p>
+<p>15. Click the <strong>Reset</strong> button at the top, and <strong>Reset</strong> Again on the resultant screen.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-119.png" data-desc-position="top"><img alt="" src="../assets/docx-image-119.png"></a></p>
+<p>16. Click <strong>Call Routing &gt; Translation Pattern</strong> and add a new one<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-120.png" data-desc-position="top"><img alt="" src="../assets/docx-image-120.png"></a></p>
+<p>17. Configure it with the settings as pictured below.</p>
+<div class="admonition curious">
+<p class="admonition-title">Curious</p>
+<p>The goal of this translation pattern is to catch any inbound call from the local gateway that has a destination of four digits. We then <strong>Route next hop by calling party number</strong> which will match based on the callers number. The next step is to implement a logic of “If a caller calls four digits from +1-123-456-7890 then they are a member of the New York Site, so translate to 43XXXX. If they call from +1-456-789-1234 they are a member of the San Jose site, so translate to 42XXXX”  </p>
+</div>
+<p>Once you have populated the details, click <strong>Save</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-121.png" data-desc-position="top"><img alt="" src="../assets/docx-image-121.png"></a></p>
+<p>18. Add another translation pattern with the settings as follows. Note that +1720647XXXX is the DID Range for our New York site in this example.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-122.png" data-desc-position="top"><img alt="" src="../assets/docx-image-122.png"></a></p>
+<p>19. Now return to Eric Steele’s Webex client and dial the 4 digit extension, notice the call is now delivered to Kellie’s Jabber client!</p>
+<h3 id="migrate-ucm-user-to-webex-calling">2.3.3 Migrate UCM User To Webex Calling</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Next, lets step through what happens when we want to move the UCM Based user over to Webex Calling.</p>
+</div>
+<p>1. It’s a good idea to move a user over to Webex Calling without removing their UCM config, until we can confirm everything is working at least. We want to retain some kind of backout plan. To do this, lets create a partition that hides the users directory number. Open the <strong>Call Routing &gt; Class Of Control &gt; Partition Menu</strong><br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-123.png" data-desc-position="top"><img alt="" src="../assets/docx-image-123.png"></a></p>
+<p>2. Add a new partition as follows<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-124.png" data-desc-position="top"><img alt="" src="../assets/docx-image-124.png"></a></p>
+<p>3. Open <strong>Call Routing &gt; Route Plan Report</strong>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-125.png" data-desc-position="top"><img alt="" src="../assets/docx-image-125.png"></a></p>
+<p>4. Search for patterns that begin with <strong>+1720647</strong> and open the one assigned to Kellie Melby<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-126.png" data-desc-position="top"><img alt="" src="../assets/docx-image-126.png"></a></p>
+<p>5. Change the route partition to Hidden<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-127.png" data-desc-position="top"><img alt="" src="../assets/docx-image-127.png"></a></p>
+<p>6. Scroll down and do the same for the enterprise alternate number. Click <strong>Save</strong><br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-128.png" data-desc-position="top"><img alt="" src="../assets/docx-image-128.png"></a></p>
+<p>7. Apply the config and click OK in the resulting window<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-129.tiff" data-desc-position="top"><img alt="" src="../assets/docx-image-129.tiff"></a></p>
+<p>8. Next, open control hub, and select <strong>PSTN &amp; Routing &gt; Gateway Configurations &gt; Route Lists</strong> then click the 3 dots and delete the route list. <strong>NOTE:</strong> This deletes the entire route list, which can be useful if you structure your route lists by migration batches. Otherwise, you may need to open the route list and delete individual patterns from it. Your PSTN numbers will not be available to assign to users until they’ve been deleted from their route list.  </p>
+<p><strong><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-130.png" data-desc-position="top"><img alt="" src="../assets/docx-image-130.png"></a></strong></p>
+<p>9. Now select <strong>Users</strong> and open Kellie Melby’s account. Click the “Edit Licenses” button<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-131.png" data-desc-position="top"><img alt="" src="../assets/docx-image-131.png"></a></p>
+<p>10. Click Edit Licenses again on the resulting screen, then select Calling and tick Webex Calling Professional license and <strong>Save</strong><br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-132.png" data-desc-position="top"><img alt="" src="../assets/docx-image-132.png"></a></p>
+<p>11. Next, assign the only free number from the New York location – And remember <strong>Give Kellie the same 4 digit directory number as Charles Holland!</strong> Then click <strong>Save</strong>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-133.png" data-desc-position="top"><img alt="" src="../assets/docx-image-133.png"></a></p>
+<p>12. Open Control Hub and Go to <strong>Calling &gt; Settings</strong> and re-enable <strong>Allow Extension Dialling Between Locations</strong> – We are returning this parameter to the default setting before testing further.  <strong>Click Save</strong>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-134.png" data-desc-position="top"><img alt="" src="../assets/docx-image-134.png"></a></p>
+<h3 id="webex-calling-inter-location-dialing">2.3.4 Webex Calling Inter Location Dialing</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Now our Webex calling user configuration is mostly complete for this site, lets pause for a moment to see how our internal dial plan is functioning and explore one of the options we have available. Remember, the user accounts use the domain suffix from your dCloud session and the password of dCloudXXXX! Where XXXX is the last four digits of your session ID.</p>
+</div>
+<p>1. Ensure Eric Steele is logged into Webex on Workstation 2 now. The username will be <a href="mailto:esteele@cbXXX.dc-YY.com">esteele@cbXXX.dc-YY.com</a> and the password will be the same as Anita’s; You can get it from the session info file on the desktop. Observe that you can see both his primary line, and the reception line we created earlier on</p>
+<p>2. Open Workstation 3 from the dCloud session using either WebRDP or RDP Application, the same as you have been accessing Workstation 1 and 2<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-135.png" data-desc-position="top"><img alt="" src="../assets/docx-image-135.png"></a></p>
+<p>3. Open the Webex application and ensure Kellie Melby is logged in to Webex. The details are on the desktop in the Session_Info.txt file</p>
+<p>4. Next, go to <strong>PSTN &amp; Routing</strong> <strong>&gt; Numbers</strong>. Observe that Kellie Melby and Charles Holland currently have the same four digit extension number, representing extension number overlap<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-136.png" data-desc-position="top"><img alt="" src="../assets/docx-image-136.png"></a></p>
+<p>5. Dial the four digit extension number from Workstation 2, Eric Steele. Observe that the call is delivered to Kellie Melby, as they are in the same location. If you have issues, you may need to sign out and back in to Webex to make the earlier configuration take effect.  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-137.png" data-desc-position="top"><img alt="" src="../assets/docx-image-137.png"></a></p>
+<p>6. Now go to Control Hub. Open Users page and select Kellie Melby. Go to the calling tab, and change her extension to match the last four digits of her full DDI by clicking the existing extension and changing the value. We are removing extension number overlap to see what happens to our dialing habits  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-138.png" data-desc-position="top"><img alt="" src="../assets/docx-image-138.png"></a>  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-139.png" data-desc-position="top"><img alt="" src="../assets/docx-image-139.png"></a></p>
+<p>7. Dial the original extension number from Eric Steele again. Note the call now routes to Charles Holland, and the extension shows as the full 6 digit number!  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-140.png" data-desc-position="top"><img alt="" src="../assets/docx-image-140.png"></a></p>
+<div class="admonition curious">
+<p class="admonition-title">Curious</p>
+<p>This is because the setting “allow extension dialing between locations” is enabled by default. This setting controls if a user can dial between sites without a site code, with preference being given to a local site match. This is why Eric got Kellie the first time, because she is within the same site as Eric. Once Kellie’s number changed, we routed to Charles in a different site instead; Even though we didn’t dial the site routing prefix for New York</p>
+</div>
+<p>8. From control hub, Open the calling menu, and click on the settings tab.</p>
+<p>9. Disable the “Allow extension dialling between locations” and save the configuration.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-141.png" data-desc-position="top"><img alt="" src="../assets/docx-image-141.png"></a></p>
+<p>10. Try your call again. This time, the call will not be delivered to Charles Webex client, because we didn’t dial the full 6 digit number including the site code for Charles Holland.</p>
+<p>11. Now, dial Charles holland using 6 digit dial, 42XXXX and observe the call succeeds. Observe that now you MUST dial 42XXXX, since this is a cross-location call. Dialing only 4-digits will no longer work. This is an important setting to remember for deterministic routing in extension number overlap situations!  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-142.png" data-desc-position="top"><img alt="" src="../assets/docx-image-142.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Imagine a scenario where User A, who is in Site 1, dials the digits 1001 (I.e does not include any site routing code) Let’s explore what User A will experience, in the following configuration scenarios, where we might have extension overlap between sites, and how the settings for allowing extension dialing between sites affects call routing (On = Allow; Off = Disallow). See the <a href="https://help.webex.com/en-us/article/pxtu15/Configure-your-Webex-Calling-dial-plan#:~:text=Allow%20extension%20dialing%20between%20locations,extensions%20across%20all%20its%20locations.">help.webex.com article</a> for more information. <a href="https://help.webex.com/en-us/article/pxtu15/Configure-your-Webex-Calling-dial-plan">Configure Webex Calling Dialplan</a></p>
+<p><strong>User A in site 1 dials 1001:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No.</td>
+<td>User B</td>
+<td>User C</td>
+<td>User D</td>
+<td>Setting</td>
+<td>Result</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1001 in Site 1</td>
+<td>Not Configured</td>
+<td>Not Configured</td>
+<td>On or Off</td>
+<td>A will call B</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1001 in Site 1</td>
+<td>1001 in Site 2</td>
+<td>Not Configured</td>
+<td>On or Off</td>
+<td>A will call B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Not Configured</td>
+<td>1001 in Site 2</td>
+<td>Not Configured</td>
+<td>On</td>
+<td>A will call C</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Not Configured</td>
+<td>1001 in Site 2</td>
+<td>Not Configured</td>
+<td>Off</td>
+<td>The call fails</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Not Configured</td>
+<td>1001 in Site 2</td>
+<td>1001 in Site 3</td>
+<td>On</td>
+<td>A will call C/D</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Not Configured</td>
+<td>1001 in Site 2</td>
+<td>1001 in Site 3</td>
+<td>Off</td>
+<td>The call fails</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Scenario 5 will call either User C or User D unpredictably; you should avoid this when possible.</p>
+</div>
+<h3 id="dial-0-for-webex-calling-reception">2.3.5 Dial 0 for Webex Calling Reception</h3>
+<p>Now let’s test our 0 for reception pattern. Dial 0 from Charles Holland on Workstation 1 and note the call gets delivered to Eric Steeles Webex client. Take a deep breath, this is the only test scenario in this entire lab with a single step!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-143.png" data-desc-position="top"><img alt="" src="../assets/docx-image-143.png"></a></p>
+<h3 id="inter-webex-calling-ucm-calls">2.3.6 Inter Webex Calling &amp; UCM Calls</h3>
+<h4 id="unknown-extension-trunk">2.3.6a Unknown Extension Trunk</h4>
+<p>1. Now we want to test internal calls between Webex Calling and UCM Users. Since we already did some real world testing, let’s leverage a tool we have to inspect our call routing – similar to dialled number analyzer. From Control Hub, go to <strong>PSTN &amp; Routing &gt;Gateway Configurations &gt; Verify Call Routing</strong>  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-144.png" data-desc-position="top"><img alt="" src="../assets/docx-image-144.png"></a></p>
+<p>2. Select Charles Holland as the user. Enter a call destination of 6026. This is a four digit extension number defined for user Taylor Bard on UCM. Click See Routing Result and note the result is the call is rejected<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-145.png" data-desc-position="top"><img alt="" src="../assets/docx-image-145.png"></a></p>
+<p>3. Repeat this process for Kellie as the source too, note the call is routed as an unknown extension because we set up the trunk for it at the location level. Remember this is a site specific setting if you ever need to troubleshoot!<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-146.png" data-desc-position="top"><img alt="" src="../assets/docx-image-146.png"></a></p>
+<p>4. Open locations, and select the San Jose location. Go to the calling tab, and open the internal dialing section.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-147.png" data-desc-position="top"><img alt="" src="../assets/docx-image-147.png"></a></p>
+<p>5. Note the parameter at the bottom “Calls to on-premises extensions”. Set this to on, and select the internal trunk route group you created earlier. Remember to save the configuration! This is functionally the same as a match all route pattern for internal extensions that you may have set on UCM in the past, designed to route unknown extensions that aren’t configured locally to a specific system.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-148.png" data-desc-position="top"><img alt="" src="../assets/docx-image-148.png"></a></p>
+<p>6. Note that you must set the unknown extension trunk individually per site, so repeat the process for any further sites you configure We allow this granularity because media will anchor to the gateway this trunk is attached to, so each location should be able to choose its own for optimal media routing.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-149.png" data-desc-position="top"><img alt="" src="../assets/docx-image-149.png"></a></p>
+<p>7. Use verify call routing again to show 4 digit calls now are sent over the trunk via the RG_Internal we created earlier<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-150.png" data-desc-position="top"><img alt="" src="../assets/docx-image-150.png"></a></p>
+<p>8. The user we want to dial on UCM is Taylor Bard on DN 6026. Taylor is a member of the London Site that we didn’t migrate yet – so the 6 digit number is 446026. Enter this into verify call routing and observe the call is also sent across the internal route group<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-151.png" data-desc-position="top"><img alt="" src="../assets/docx-image-151.png"></a></p>
+<p>9. Now do the same for the 7 digit number 4416026. Notice the call is sent to PSTN as a valid destination! We will explore why this happens in the PSTN Routing section.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-152.png" data-desc-position="top"><img alt="" src="../assets/docx-image-152.png"></a></p>
+<p>10. Now repeat this again for an 8 digit number, 44116026. Notice the call is rejected! 8 digit numbers like this are not valid PSTN destinations in the USA dial plan, so Webex Calling does not know how to handle this call. We will explore this in the Maximum Unknown Extension Length Section.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-153.png" data-desc-position="top"><img alt="" src="../assets/docx-image-153.png"></a></p>
+<h4 id="webex-calling-pstn-routing">2.3.6b Webex Calling &amp; PSTN Routing</h4>
+<div class="admonition curious">
+<p class="admonition-title">Curious</p>
+<p>In UCM, we used to decide which digit patterns were routed to PSTN. In Webex Calling, the <a href="https://help.webex.com/en-us/article/757iyo/Dial-plans-by-country#United-States">PSTN Dial plan</a> is pre configured for every country we support. We never need to tell Webex calling which calls should go to PSTN, our dial plan handles this automatically and sends calls to the configured PSTN Connection if it is a PSTN Number. This can introduce some intricacies in UCM co-existence scenarios; But don’t worry, we have tools to manage that!</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>We just configured the feature that allows us to set a destination trunk for unknown extension numbers to route to in the case that no other matches are found. The idea of this is that when a Webex Calling MT user dials an unknown number that looks like an extension number, we route it to UCM. See the following decision tree diagram for information on how we decide where to route these calls.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-154.png" data-title="A diagram of a selection Description automatically generated" data-desc-position="top"><img alt="A diagram of a selection Description automatically generated" src="../assets/docx-image-154.png"></a></p>
+<p>Lets step through the logic in the diagram above, analyzing a scenario where a user on Webex Calling wants to dial a UCM based user over the New York Internal trunk. This UCM based user breaks our 6 digit dial plan and is using a 7 digit extension number of 4416026.</p>
+<ul>
+<li>Charles looks up a user in the directory, their extension is 4416026. He dials that user.</li>
+<li>Webex calling analyses the dialed digits. This is not an Emergency pattern, pass to the next gate.</li>
+<li>There is no configured translation pattern (TP) match for 4416026, pass to the next gate.</li>
+<li>The outbound dial digit does not exist, pass to the next gate.</li>
+<li>There is no internal match configured within Webex Calling, pass to the next gate.</li>
+<li>NS Lookup finds that 4416026 matches the XXXXXXX Local Calls pattern for North America PSTN Numbering plan, send the call out of PSTN!</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-155.png" data-desc-position="top"><img alt="" src="../assets/docx-image-155.png"></a></p>
+<p>Our goal is to have this route over to the UCM Via the trunk. First, we have to understand our unknown extension number handling logic.</p>
+</div>
+<h4 id="maximum-unknown-extension-length-pstn-routing">2.3.6c Maximum Unknown Extension Length &amp; PSTN Routing</h4>
+<p>1. Let’s imagine for a second that we have some UCM Based users that have 8 digit extension numbers. We just used verify call routing for a number 44116026 and noticed that this call was rejected.</p>
+<p>2. This is because of the parameter that governs the maximum unknown extension length. The default is 6, so an 8 digit number is not valid for routing as an unknown extension number.</p>
+<p>3. Go to Calling Menu, and settings. Scroll down to the Maximum unknown extension length setting, and set it to 8 digits. Save the configuration<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-156.png" data-desc-position="top"><img alt="" src="../assets/docx-image-156.png"></a></p>
+<p>4. Go back to PSTN &amp; Routing, Gateway Configurations, Verify call routing, and check our routing again to 44116026. Notice now the call now routes as an unknown extension over to UCM via our gateway, trunk and route group configuration we set up earlier! Great!<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-157.png" data-desc-position="top"><img alt="" src="../assets/docx-image-157.png"></a></p>
+<p>5. Now change your called number to 4416026, a 7 digit number. Notice now the call still routes to an external number via PSTN! Why isn’t this routing as an unknown extension?<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-158.png" data-desc-position="top"><img alt="" src="../assets/docx-image-158.png"></a></p>
+<div class="admonition curious">
+<p class="admonition-title">Curious</p>
+<p>The length of unknown extensions can be anything from 2-10 digits. It is important to set this accurately, since some countries such as the USA have nonspecific PSTN Dial plans that route 7 digits to PSTN, such as XXXXXXX. Using the example of Germany, any number from 5 digits in length, all the way up to 13 digits in length constitutes a valid destination for PSTN routing! So how do we route to internal unknown extension numbers in that scenario? With what we just learned, it would seem that all of our internal users would be pushed to PSTN instead of over the trunk to UCM! See a screenshot of the Germany PSTN dial plan below.  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-159.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-159.png"></a></p>
+<p>In a production environment, we need to mitigate this PSTN/Internal dial plan overlap by enforcing outbound dial digit, and /or setting the maximum valid length for an internal call. Some countries can get by with correctly setting the maximum unknown extension length, others will require outbound dial digit enforcement. It depends what their PSTN dial plan looks like.</p>
+<p>In our example, we fixed the 8 digit extension problem, but 7 digit numbers are still going out of PSTN because it’s a valid PSTN destination in the USA. Let’s dive into this now!</p>
+</div>
+<p>9. You can check the <a href="https://help.webex.com/en-us/article/757iyo/Dial-plans-by-country">country specific dial plan document</a> to check for overlaps in real world scenarios. Open the page, and have a look at the North American numbering plan now and find the 7 digit PSTN pattern we are hitting here</p>
+<p>10. We’re in a good spot for everything except our 7 digit internal routing. How do we fix this? Let’s turn on outbound dial digit enforcement! Open your San Jose location and go to the calling tab then External dialing.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-160.png" data-desc-position="top"><img alt="" src="../assets/docx-image-160.png"></a></p>
+<p>11. Set the outbound dial digit to 9 and enable enforcement. Repeat this for the New York site. We cannot set this for Dallas &amp; London yet, as we have not configured calling for them.
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-161.png" data-desc-position="top"><img alt="" src="../assets/docx-image-161.png"></a></p>
+<p>12. <strong>Note:</strong> Setting the outbound dial digit <strong>without</strong> enforcement makes the outbound dial digit permissive, which will not fix our problem since we still have a 7 digit match. See the below table to see which dial strings will be forwarded to PSTN for a USA Site.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dial Digit</strong></td>
+<td><strong>Enforcement</strong></td>
+<td><strong>Valid PSTN Dial Strings</strong></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Enabled</td>
+<td>9-476-2428</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Disabled</td>
+<td>9-476-2428  476-2428</td>
+</tr>
+</tbody>
+</table>
+<p>13. Open PSTN &amp; Routing, Gateway Configurations, Verify Call Routing, Choose Charles Holland as the source and enter the 7-digit number 4416026. Note it now routes internally as an unknown extension, since our maximum unknown extension length is 8 digits, and we didn’t dial the outbound dial digit of 9 to indicate it’s a PSTN Call<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-162.png" data-desc-position="top"><img alt="" src="../assets/docx-image-162.png"></a></p>
+<p>14. Check again with a 9 at the front. Note the call goes to PSTN now!<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-163.png" data-desc-position="top"><img alt="" src="../assets/docx-image-163.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Let’s step through our destination selection scenario again to understand this process.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-164.png" data-title="A diagram of a selection Description automatically generated" data-desc-position="top"><img alt="A diagram of a selection Description automatically generated" src="../assets/docx-image-164.png"></a></p>
+<ul>
+<li>Charles looks up a user in the directory, their extension is 4416026. He dials that user.</li>
+<li>Webex calling analyses the dialed digits. This is not an Emergency pattern, pass to the next gate.</li>
+<li>There is no configured translation pattern (TP) match for 4416026, pass to the next gate.</li>
+<li>The outbound dial digit (ODD) does not exist, pass to the next gate.</li>
+<li>There is no internal match configured within Webex Calling, pass to the next gate.</li>
+<li>We don’t have outbound dial digit present and enforcement is enabled. Don’t check NS Lookup patterns for PSTN routing, Number is unknown</li>
+<li>We invoke <strong>route unknown extensions to premises</strong> configuration, and call is pushed over the internal calling trunk to our local gateway connected to UCM.</li>
+</ul>
+<p>We have now set up our UCM-Webex Calling internal calls trunk. In practice, remember to consider the interactions between maximum unknown extension length, the default PSTN dial plan, and enforce outbound dial digit configurations.</p>
+</div>
+<h4 id="real-test-calls">2.3.6d Real Test Calls</h4>
+<p>1. Leave Webex open as Charles Holland, and Open Jabber on Workstation 1. Login as Taylor Bard, <a href="mailto:tbard@cbxxx.dc-xx.com">tbard@cbxxx.dc-xx.com</a> (Remember to swap out your specific domain suffix)<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-165.png" data-desc-position="top"><img alt="" src="../assets/docx-image-165.png"></a></p>
+<p>2. On the next screen, enter the username tbard and the password of dCloud123!<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-166.png" data-desc-position="top"><img alt="" src="../assets/docx-image-166.png"></a></p>
+<p>3. Open the local gateway via Putty and log in. Enter the “show run” command and press enter. You should see the configuration – press space 7 or 8 times to scroll down to the area that looks something like the below. The red part will change in your deployment according to your trunk name.  </p>
+<pre><code>
+voice class uri 301 sip  
+pattern dtg=<text style="color:red;">intcal0729693267_lgu</text>
+</code></pre>
+
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-167.png" data-desc-position="top"><img alt="" src="../assets/docx-image-167.png"></a></p>
+<p>4. Now find the configuration that looks like this by pressing space a few more times; Note that the dial peer is selected when the incoming URI matches 301 – Which is the command we just saw that references the internal calls trunk.  </p>
+<pre><code>
+dial-peer voice 300 voip
+description WxC Side Internal Dial Peer for UCM&lt;&gt;WxC Flow
+max-conn 250
+destination-pattern BAD.BAD
+session protocol sipv2
+session target sip-server
+destination dpg 301
+<text style="color:red;">incoming uri request 301</text>
+no voice-class sip localhost
+voice-class sip tenant 300
+dtmf-relay rtp-nte
+srtp
+no vad
+</code></pre>
+
+<p>5. Press q to exit out of the configuration display mode. Issue the commands below and press enter after each one<br>
+</p><div class="highlight"><pre><span></span><code>debug ccsip messages  
+terminal monitor
+</code></pre></div><p></p>
+<p>6. Dial 6026 from another users Webex Client. You should see the call arrive on Taylors Jabber client. Take a look on your local gateway for the Received SIP Message – There will be quite a few messages, but you want to see the one that starts with the text that's in bold below. It will be one of the first messages. Note the dtg that matches the voice class we looked at above! Which then matches the incoming uri statement on the dial peer. This is how CUBE identifies the dial peer to receive the call on. If you want to go deeper on this, check the bonus content we will share with you; but we recommend completing the lab fully before you do this due to time constraints. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you find the terminal jumps around before you can find things, issue the command
+  </p><div class="highlight"><pre><span></span><code>terminal no monitor
+</code></pre></div><p></p>
+<p>This will stop the debugs coming in. Remember to turn it on again before the next tests!  </p>
+</div>
+<div class="admonition code">
+<p class="admonition-title">Code</p>
+<p><b></b></p><b>
+<div class="highlight"><pre><span></span><code>Received:
+INVITE sip:6026@198.18.1.227:5070;transport=tls;dtg=intcal0729693267_lgu SIP/2.0
+</code></pre></div>
+</b><p><b></b></p>
+<div class="highlight"><pre><span></span><code>Via:SIP/2.0/TLS 150.253.153.83:8934;branch=z9hG4bKBroadworksSSE.-64.100.12.5V7654-0-100-1675611455-1779276320297-
+From:"Charles Holland"&lt;sip:426014@150.253.153.83;user=phone&gt;;tag=1675611455-1779276320297-
+To:&lt;sip:6026@40462196.cisco-bcld.com;user=phone&gt;  
+</code></pre></div>
+</div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-168.png" data-desc-position="top"><img alt="" src="../assets/docx-image-168.png"></a></p>
+<p>7. Let’s test in the other direction. Open Chrome on the desktop of workstation 1, and open the UCM from the Collaboration Admin Links section. The username is administrator and the password is dCloud123!</p>
+<p>8. Go to Call Routing, Route/Hunt and then Route Pattern.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-169.png" data-desc-position="top"><img alt="" src="../assets/docx-image-169.png"></a></p>
+<p>9. Add a New one as follows. We want to ensure numbers are passed to Webex Calling in +E.164 format at all times. Note that in a real deployment, you would use less specific patterns to match entire groups of users. </p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You must switch out the relevant route pattern and called party transform mask to match your own deployment here, otherwise calls will fail. You can get Charles +E.164 by clicking the avatar on his Webex Client</p>
+</div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Route Pattern</strong></td>
+<td>Charles Hollands DN E.g 3304</td>
+</tr>
+<tr>
+<td><strong>Route Partition</strong></td>
+<td>Base PT</td>
+</tr>
+<tr>
+<td><strong>Gateway/Route List</strong></td>
+<td>LGW_RL</td>
+</tr>
+<tr>
+<td><strong>Called Party Transform Mask</strong></td>
+<td>Charles Holland’s +E.164, E.g +1209821XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>10. Go back to your gateway and use the show run command to find and observe the following configuration. It’s a few lines down from the big list of IPv4 statements. This is a regular expression that matches anything in the range of 198.18.133.X subnet using port 5065.  </p>
+<div class="highlight"><pre><span></span><code>voice class uri 101 sip
+pattern 198\.18\.133\..\*:5065
+</code></pre></div>
+<p>11. Press q to exit out of the configuration display mode. Issue the commands below and press enter after each one<br>
+</p><div class="highlight"><pre><span></span><code>debug ccsip messages  
+terminal monitor
+</code></pre></div><p></p>
+<p>12. Now make a call from Taylor Bard’s jabber client to the 4 digit number you just configured for the Route pattern</p>
+<p>13. Check your local gateway again and find the first invite for this call. Note the part in bold that shows the port of 5065; This is how cube identifies the call is incoming from UCM according to voice class uri 101 above. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you find the terminal jumps around before you can find things, issue the command
+  </p><div class="highlight"><pre><span></span><code>terminal no monitor
+</code></pre></div><p></p>
+<p>This will stop the debugs coming in. Remember to turn it on again before the next tests!  </p>
+</div>
+<div class="admonition code">
+<p class="admonition-title">Code</p>
+<p></p><div class="highlight"><pre><span></span><code>Received:
+INVITE sip:+12792386014@198.18.133.227:5060 SIP/2.0
+</code></pre></div>
+  <b><p></p>
+<div class="highlight"><pre><span></span><code>Via: SIP/2.0/TCP 198.18.133.4:5065;branch=z9hG4bK178576b2d95
+</code></pre></div>
+</b><p><b></b>
+  </p><div class="highlight"><pre><span></span><code>From: "Taylor Bard" &lt;sip:6026@198.18.133.4&gt;;tag=6051~166e7111-890f-42b6-afa8-1bcd50aa0a1e-19692354
+To: &lt;sip:+12792386014@198.18.133.227&gt;  
+</code></pre></div><p></p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-170.png" data-desc-position="top"><img alt="" src="../assets/docx-image-170.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In a real deployment, you would also configure extra route patterns for 6 digit and +E.164 routing on UCM, but this is a Webex Calling lab - so in the interests of time we will not do this in this lab.</p>
+</div>
+<h4 id="webex-calling-to-ucm-e164-call-routing">2.3.6e Webex Calling To UCM E.164 Call Routing</h4>
+<div class="admonition curious">
+<p class="admonition-title">Curious</p>
+<p>Unknown extension length routing and outbound dial digit enforcement does not cater for on net E.164 routing. For this, we must use dial plans. Note that dial plans are Organization wide in scope, so anything you add as a routing trunk target will be set as such for every user in the MT org. Unknown extension number routing, however, is site specific. </p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Do not use dial plans for real PSTN Routing! It is only for on-net destinations and will cause catastrophic call routing failures if used improperly!</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Let’s imagine our customer owns the PSTN DDI Range <strong>+1294321602X</strong> and it is currently servicing users on UCM. The internal extension range of 602X is catered for already by our <strong>unknown extension number</strong> routing settings. However, the +E.164 patterns will currently route to PSTN, because they are valid patterns! Let’s test this out now.</p>
+</div>
+<p>1. Open control hub, Select PSTN &amp; Routing, Gateway Configurations and choose Verify call routing. Enter a source user of Kellie Melby, and a destination of Taylor Bard on their full +E.164 DDI +12943216026. Observe that this call actually goes out of the PSTN connection!<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-171.png" data-desc-position="top"><img alt="" src="../assets/docx-image-171.png"></a></p>
+<p>2. We actually want this number range to route over our internal trunk. Select PSTN &amp; Routing, Gateway Configurations and then Dial Plans. Click the button to create a new one.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-172.png" data-desc-position="top"><img alt="" src="../assets/docx-image-172.png"></a></p>
+<p>3. Add a new dial plan as the screenshot shows. Note: We will stress again, these dial plans are organization wide and must be configured in a very specific and granular manner with only the exact ranges the customer owns; Accidental inclusion of ranges that customers do not own will break PSTN routing for the given numbers. In the below example, adding +129432160XX will route 100 DDI’s to UCM, instead of 10 – preventing every user on WxC MT from dialing the PSTN numbers that the customer does not actually own. We want to add only +1294321602X  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-173.png" data-desc-position="top"><img alt="" src="../assets/docx-image-173.png"></a></p>
+<p>4. Navigate again to PSTN &amp; Routing, Gateway Configurations and verify call routing. Enter a source of Kellie and a destination of Taylor’s +E.164 number +12943216026 to see these numbers routed over the internal trunk to UCM; via the dial plan we just created.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-174.png" data-desc-position="top"><img alt="" src="../assets/docx-image-174.png"></a></p>
+<p>5. Open the UCM Admin page again, Call Routing and then Route Plan Report.   </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-175.png" data-desc-position="top"><img alt="" src="../assets/docx-image-175.png"></a></p>
+<p>6. Search for pattern 6026 and open the number by clicking on it on the Pattern or URI Column. Earlier on in this lab, we added Kellie’s Jabber client with a +E.164 DN. Taylor has a 4 digit DN; You can use either method given to support whatever you currently have in your environment.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-176.png" data-desc-position="top"><img alt="" src="../assets/docx-image-176.png"></a></p>
+<p>7. Scroll down and click the button to add an +E.164 Alternate Number. A new section will appear.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-177.png" data-desc-position="top"><img alt="" src="../assets/docx-image-177.png"></a></p>
+<p>8. Configure the number mask +1294321XXXX. Add it to local route partition Base_PT and save the config. This associates the full +E.164 number with Taylor’s Jabber line. In your deployment, this may already be done via a different method.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-178.png" data-desc-position="top"><img alt="" src="../assets/docx-image-178.png"></a></p>
+<p>9. Dial +12943216026 from Charles Hollands Webex client, and observe the call is delivered to Taylor Bard’s Jabber client. The connected party ID will show as 6026 because we didn’t configure connected party transformations in this lab; but we dialed the full +E.164 number and the call connected.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-179.png" data-desc-position="top"><img alt="" src="../assets/docx-image-179.png"></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../lab-site-1-san-jose-20-30-minutes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: San Jose">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                San Jose
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lab-site-3-dallas-20-30-minutes/" class="md-footer__link md-footer__link--next" aria-label="Next: Dallas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Dallas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Cisco
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../template_assets/js/newLoad.js"></script>
+      
+        <script src="../template_assets/js/setInfo.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

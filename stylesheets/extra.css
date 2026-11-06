@@ -1,0 +1,54 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+@import "admonition.css";
+
+.md-typeset__table {
+    min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+    display: table;
+}
+
+.md-grid {
+    max-width: 1440px;
+}
+
+:root {
+    --md-primary-fg-color: #051C2C;
+    --md-accent-fg-color: #00bdeb;
+}
+
+[data-md-color-scheme="default"] {
+    --md-typeset-a-color: #3a7fff;
+    --md-accent-fg-color: #00bdeb;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-typeset-a-color: #3a7fff;
+    --md-accent-fg-color: #00bdeb;
+}
+copy::after, .copy::after {
+  content: "\f0c5"; /* Font Awesome code for the copy icon */
+  font-family: "Font Awesome 5 Free"; /* The font-family may vary, ensure it matches the imported version */
+  font-weight: 900; /* Ensure the weight matches the icon style */
+  font-style: normal;
+  text-decoration: inherit;
+  display: inline-block; /* Ensure the icon is visible */
+  margin-left: 5px; /* Optional: Add space between text and icon */
+
+}
+
+copy:hover::after, .copy:hover::after {
+  color: #00bdeb;
+}
+form#info input{
+  border: solid 1px;
+}
+form#info button{
+    border:solid 2px;
+    border-radius: 25px;
+    padding: 10px;
+}
+form#info button:hover{
+    background-color:rgb(195, 193, 201);
+}

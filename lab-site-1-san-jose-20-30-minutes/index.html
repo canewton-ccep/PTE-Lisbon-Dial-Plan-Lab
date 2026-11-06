@@ -1,0 +1,1180 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration">
+      
+      
+        <meta name="author" content="Carl Newton">
+      
+      
+      
+        <link rel="prev" href="../lab-access-2-minutes/">
+      
+      
+        <link rel="next" href="../lab-site-2-new-york-1-hour-15-minutes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../template_assets/webex75.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>San Jose - PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-site-1-san-jose-20-30-minutes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" class="md-header__button md-logo" aria-label="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              San Jose
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-learning-objectives/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lab Preamble
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-access-2-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accessing Your Lab
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  San Jose
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-2-new-york-1-hour-15-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  New York
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-3-dallas-20-30-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dallas
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-4-london-30-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  London
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slido/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lab Survey
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-debug-calls-through-local-gateway/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Bonus Content
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" class="md-nav__button md-logo" aria-label="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab Preamble
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lab Preamble
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-learning-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mock Scenario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-access-2-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing Your Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    San Jose
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    San Jose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Configuration Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Configuration Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assign-main-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 Assign Main Number
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-numbers-to-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 Assign numbers to users
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Test Calls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-base-dial-plan-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Configure Base Dial Plan Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-revised-dial-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Test Revised Dial Plan
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-2-new-york-1-hour-15-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New York
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-3-dallas-20-30-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dallas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-4-london-30-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    London
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab Survey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus Content
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bonus Content
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-debug-calls-through-local-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debug Local Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-site-1-san-jose-20-30-minutes">Lab Site 1 – San Jose [20-30 Minutes]</h1>
+<h2 id="overview">1.1 Overview</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This site represents your typical branch site with a cookie cutter requirement. Users with phones and Webex apps, that need access to PSTN via Cisco Calling Plans PSTN. The customer has variable length dial plan, and requires the users within this site to be able to dial each other using a 4 &amp; 5 digit short dial, dialing the full PSTN number without country code, or using the full +E.164 number. Other users at other sites should be dialable using their 6 digit extensions. They also request to be able to dial 0 to reach a reception desk that is located at New York. The customer also has a requirement to route all calls to unknown extension numbers as internal calls over to a Unified Communications Manager based trunk to premises registered users. The reception desk and internal trunk will be configured later during the New York exercise.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/diagrams/01-san-jose-call-paths.png" data-title="San Jose call paths" data-desc-position="top"><img alt="San Jose call paths" src="../assets/diagrams/01-san-jose-call-paths.png"></a></p>
+<p>Colour key: pink = calls to/from UCM users, blue = Webex-to-Webex calls, orange = PSTN calls for Webex users, purple = PSTN calls for UCM users (Hybrid PSTN only); lit pipes show the path a call takes, and grey pipes aren't used.</p>
+<h2 id="configuration-steps">1.2 Configuration Steps</h2>
+<p>1. Open RDP connection to Workstation 1 at 198.18.1.36., using <strong>option (A)</strong> or <strong>option (B)</strong> as described above. If needed, Workstation 1 credentials are <strong>dcloud\cholland</strong> and <strong>dCloud123!</strong></p>
+<p>2. Open Chrome browser from the taskbar. There is also a file on the desktop named “Session_info.txt”; Open it up now.</p>
+<p>3. From the browser home Page, select <strong>Cisco Webex Links</strong> &gt; **Cisco Webex Control Log in with <strong>cholland@cbXXX.dc-YY.com</strong> and <strong>dCloud<em>AAAA</em>!.</strong> Accept all security warnings and welcome prompts! You need to Replace <strong>XXX, YY</strong> and <strong>YYYY</strong> with your session-specific details. Credentials for your session are located in text file Session_Info.txt on Workstation Desktop.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-009.png" data-desc-position="top"><img alt="" src="../assets/docx-image-009.png"></a></p>
+<p>4. For security reasons, <strong>Webex Control Hub</strong> signs out every 20 minutes (Idle timeout) by default. For this lab, let’s make the idle time out longer so the Control Hub does not sign you out often during this lab.</p>
+<p>5. Go to <strong>MANAGEMENT &gt; Organization Settings &gt; Control Hub’s idle timeout.</strong> Drop down the option for <strong>Control Hub idle timeout</strong> and select <strong>12 hours</strong> or <strong>no timeout</strong>. Click <strong>Save</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-010.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-010.png"></a></p>
+<p>6. Now, go to <strong>MANAGEMENT</strong> &gt; <strong>Locations.</strong> On the locations page you will see some pre-created locations. Select the location <strong>San Jose</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-011.png" data-desc-position="top"><img alt="" src="../assets/docx-image-011.png"></a></p>
+<p>7. On San Jose location page go to <strong>PSTN</strong> tab. Select <strong>Configure PSTN Services</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-012.png" data-desc-position="top"><img alt="" src="../assets/docx-image-012.png"></a></p>
+<p>8. Click <strong>Manage</strong> for PSTN Configuration &gt; PSTN connection.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-013.png" data-desc-position="top"><img alt="" src="../assets/docx-image-013.png"></a></p>
+<p>9.  It will take you to set up PSTN connection type for the <strong>San Jose</strong>. On the <strong>Edit PSTN connection for San Jose</strong> page keep the option selected for <strong>Cisco Calling Plans (CCP)</strong> and select <strong>Next</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-014.png" data-desc-position="top"><img alt="" src="../assets/docx-image-014.png"></a></p>
+<p>10. On the following page populate below information and click <strong>Next</strong>.</p>
+<ul>
+<li>First Name: <strong>Charles</strong></li>
+<li>Last Name: <strong>Holland</strong></li>
+<li>Email Address: <a href="mailto:cholland@cbXXX.dc-YY.com">cholland@cbXXX.dc-YY.com</a></li>
+<li>Confirm Email Address: <a href="mailto:cholland@cbXXX.dc-YY.com">cholland@cbXXX.dc-YY.com</a></li>
+</ul>
+<p>NOTE: Make sure you replace XXX and YY values from Session_Info.txt file on Workstation.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-015.png" data-title="A screenshot of a contact us AI-generated content may be incorrect." data-desc-position="top"><img alt="A screenshot of a contact us AI-generated content may be incorrect." src="../assets/docx-image-015.png"></a></p>
+<p>11. Click <strong>Yes, Change</strong> on the Contract Information Update pop-up window.</p>
+<p>12. On the <strong>Emergency disclaimer</strong> page scroll all the down and enter following information and click <strong>Agree and Continue</strong>.
+   * Authorized Contact: Charles Holland
+   * Job title: Engineer</p>
+<p>13. On the <strong>Emergency Services Address</strong>, leave all fields default and click <strong>Save</strong>.</p>
+<p>14. Click <strong>Apply</strong> on the address verification pop-up.</p>
+<p>15. Click <strong>Save</strong> (again) or <strong>Done.</strong></p>
+<p>16. Now the location <strong>San Jose</strong> has been setup to <strong>Cisco Calling Plans</strong> PSTN Connection type.</p>
+<p>17. Click <strong>Add Numbers</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-016.png" data-desc-position="top"><img alt="" src="../assets/docx-image-016.png"></a></p>
+<p>18. On the <strong>Add Numbers</strong> page, keep <strong>Order New Numbers</strong> selected and click <strong>Next</strong></p>
+<p>19. On the next page, keep the <strong>State/Province/Region</strong> selected for <strong>California</strong>. Drop down the option for <strong>Area Code</strong> and choose any of the area codes available. For How many numbers do you want to auto-selected for you? enter <strong><em>3</em></strong> and click <strong>Search.</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-017.png" data-desc-position="top"><img alt="" src="../assets/docx-image-017.png"></a></p>
+<p>20. On the next page, Control Hub will select 3 numbers for you. Click <strong>Order</strong>.</p>
+<p>21. It will order 3 new numbers for the location San Jose. Click <strong>View orders</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-018.png" data-desc-position="top"><img alt="" src="../assets/docx-image-018.png"></a></p>
+<p>22. It will take you to <strong>PSTN &amp; Routing</strong> &gt; <strong>PSTN orders</strong> tab/page, click on the order you just placed, and observe the order status, it is should say <strong>Provisioned.</strong> If not, wait 1 minute and try again.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-019.png" data-desc-position="top"><img alt="" src="../assets/docx-image-019.png"></a></p>
+<p>23. Now on the PSTN &amp; Routing page, go to <strong>Numbers</strong> tab, and observe the three newly placed +E.164 numbers, make sure the Status for all numbers show as <strong>Active</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-020.png" data-desc-position="top"><img alt="" src="../assets/docx-image-020.png"></a></p>
+<h3 id="assign-main-number">1.2.1 Assign Main Number</h3>
+<p>Now, we must assign a main number to the location. Without this set, Webex Calling will not allow any outgoing calls.</p>
+<p>1. Continuing on Workstation 1, Webex Control Hub. Navigate to <strong>MANAGEMENT</strong> &gt; <strong>Locations</strong>. On the locations page, choose <strong>San Jose</strong> location.</p>
+<p>2. On <strong>San Jose</strong> location page go to <strong>PSTN</strong> tab. On PSTN page, drop down the option for <strong>Main number</strong> and choose any of the available numbers. Click <strong>Save</strong>. The number will still be available for assignment whatever you wish to use it for!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-021.png" data-desc-position="top"><img alt="" src="../assets/docx-image-021.png"></a></p>
+<p>3. Observe that as soon as you Save the Main number assignment, the warning will disappear, indicating now your location can make and receive calls.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-022.png" data-desc-position="top"><img alt="" src="../assets/docx-image-022.png"></a></p>
+<h3 id="assign-numbers-to-users">1.2.2 Assign numbers to users</h3>
+<p>For this site, our telephony users will be <strong>Charles Holland</strong> and <strong>Anita Perez</strong>. We must assign them the +E.164 numbers we just ordered. Remember to give Charles a <strong><em>four</em></strong> digit extension, and Anita a <strong><em>five</em></strong> digit extension!</p>
+<p>1. Continuing on Workstation 1, Webex Control Hub. Navigate to <strong>MANAGEMENT &gt; Users.</strong> On Users page, choose user <strong>Charles Holland</strong>.</p>
+<p>2. On the Charles Holland user summary page, scroll down a little and click <strong>Edit Licenses</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-023.png" data-desc-position="top"><img alt="" src="../assets/docx-image-023.png"></a></p>
+<p>3. On Edit services for <a href="mailto:cholland@cbXXX.dc-YY.com">cholland@cbXXX.dc-YY.com</a> page, observe that no “Webex calling professional” license is assigned. Click the <strong>Edit Licenses</strong> button</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-024.png" data-desc-position="top"><img alt="" src="../assets/docx-image-024.png"></a></p>
+<p>4. On the next page, go to <strong>Calling</strong> tab, check mark options for <strong>Webex Calling</strong> and <strong>Professional</strong> and click <strong>Save.</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-025.png" data-desc-position="top"><img alt="" src="../assets/docx-image-025.png"></a></p>
+<p>5. On the next page, drop down the option for <strong>Location</strong> and choose <strong>San Jose</strong>. Now drop down the option for <strong>Phone Number</strong> and choose any +E.164 phone number. For <strong>Extension</strong> enter last 4 digits of the assigned DID number. <strong>Make a note of Charles 4 digit extension number, you will need it later!</strong> Click Save. Click <strong>Close</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-026.png" data-desc-position="top"><img alt="" src="../assets/docx-image-026.png"></a></p>
+<p>6. Repeat all the above steps for <strong>Anita Perez</strong> user. Make sure you assign last <strong><em>five</em></strong> digits of the DID number as extension number. Make a note of this number, you will need it later.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-027.png" data-desc-position="top"><img alt="" src="../assets/docx-image-027.png"></a></p>
+<h2 id="test-calls">1.3 Test Calls</h2>
+<p>Now let’s do some initial test calls to validate the existing dial plan before we start modifying things for the customer requirements.</p>
+<p>1. Continuing on Workstation 1, minimize all applications and bring up Webex from desktop. Login as <a href="mailto:cholland@cbXXX.dc-YY.com">cholland@cbXXX.dc-YY.com</a> &amp; dCloudAAAA! – these details are in your session_info.txt file. Click <strong>OK</strong> on the Emergency Call Notification window.</p>
+<p><strong>NOTE:</strong> Make sure you replace XXX, YY and AAAA values with your session specific details located in text file called Session_Info.txt on <strong><em>Workstation 1</em></strong> Desktop.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-028.png" data-desc-position="top"><img alt="" src="../assets/docx-image-028.png"></a></p>
+<p>2. Open RDP connection to Workstation 2, either using <strong>Option A</strong> or <strong>Option B</strong> described in Accessing your Lab section.</p>
+<ul>
+<li>Workstation IP Address: <strong>198.18.1.37</strong></li>
+<li>Username: <strong>dcloud\aperez</strong></li>
+<li>Password: <strong>dCloud123!</strong></li>
+</ul>
+<p>3. Once logged into Workstation 2, bring up Webex and login as <a href="mailto:aperez@cbXXX.dc-YY.com">aperez@cbXXX.dc-YY.com</a> &amp; dCloudAAAA!. <strong>NOTE:</strong> Make sure you replace XXX, YY and AAAA values with your session specific details located in text file called Session_Info.txt on <strong><em>Workstation 2</em></strong> Desktop.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-029.png" data-desc-position="top"><img alt="" src="../assets/docx-image-029.png"></a></p>
+<p>4. Switch back to Workstation 1, search for <strong>Anita Perez</strong> from Charles Hollands Webex client. Click the green call button for either Audio or Video call, and notice we are dialing the full +E.164 number as per the screenshots. Answer the call on Workstation 2 and make sure the call is successful. Notice the users extension number is shown by Webex as it’s a local user, and not the full +E.164 number. Hangup the call after few seconds.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-030.png" data-desc-position="top"><img alt="" src="../assets/docx-image-030.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-031.png" data-desc-position="top"><img alt="" src="../assets/docx-image-031.png"></a></p>
+<p>5. You can try calling PSTN number as well. Do this from Workstation 2. To dial PSTN you can dial either your mobile phone number or Cisco TAC Number +18005532447. If you dial Cisco TAC number, it will be answered by Auto Attendant, after listening to prompt for few seconds you can hang up the call. You don’t need make any selections for Auto Attendant.</p>
+<p>6. Next, try dialing the short dial extensions you configured; we configured 4 digit extension for Charles and 5 digit extension for Anita. So, if you need to dial Anita from Charles Webex dial <strong><em>5 digit</em></strong> extension (in this example: 95750). If you want to dial Charles from Anita workstation dial <strong><em>4 digit</em></strong> extension (in this example:5746). These represent your user short code dialing within locations. Hangup the call after few seconds. If you need to get the extension numbers, you can find them within Webex on the Calling tab.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-032.png" data-desc-position="top"><img alt="" src="../assets/docx-image-032.png"></a></p>
+<h2 id="configure-base-dial-plan-properties">1.4 Configure Base Dial Plan Properties</h2>
+<p>The customer has given us a “site routing code” of 42 for this site, meaning that users should be reachable using a dial string of 42 + User Extension (In the examples in the screenshots, 42 + 5746 or 42 + 95750 – your extension numbers will be different!) If you try dialing these extension numbers now prefixed by 42, you will notice the call fails, since we didn’t configure site routing codes yet</p>
+<p>In production environments with multiple locations, extension overlap can occur—for example, users in different sites may share the same extension. Webex Calling solves this by using Location Routing Prefixes (site routing codes). Each location is assigned a unique prefix, which is automatically prepended to extensions in that location, allowing users across sites to uniquely identify and reach the correct destination without using translation patterns or alternate numbers like in UCM.</p>
+<p>1. Continuing on workstation 1, Webex Control Hub.  Before we configure the Routing Prefix for each location, we need to define some parameters like how long is each Routing Prefix, and the digit each Routing Prefix starts with etc.</p>
+<p>2. On Webex Control Hub, go to <strong>SERVICES</strong> &gt; <strong>Calling</strong>. On the Calling page go to <strong>Settings</strong> tab.</p>
+<p>3. On the <strong>Settings</strong> page click <strong>Edit</strong> for <strong>Internal Dialing</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-033.png" data-desc-position="top"><img alt="" src="../assets/docx-image-033.png"></a></p>
+<p>4. Click <strong>Continue</strong> on <strong>Edit Internal Dialing</strong> pop-up window to confirm that phones need to be restarted for the changes to take effect. On the following page, enter below values and click <strong>Save</strong>.</p>
+<ul>
+<li>Location Routing Prefix Length (number of digits in each Routing Prefix): drop down and choose 2</li>
+<li>Set Steering Digit in Routing Prefix (Starting number for each Routing Prefix): drop down and choose 4</li>
+<li>Internal Extension Length: drop down and choose 4</li>
+</ul>
+<p><strong>NOTE</strong>: If you want to get more details about each parameter you can refer to the URL <a href="https://help.webex.com/en-us/article/pxtu15/Configure-your-Webex-Calling-dial-plan">https://help.webex.com/en-us/article/pxtu15/Configure-your-Webex-Calling-dial-plan</a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-034.png" data-title="A screenshot of a dialog box AI-generated content may be incorrect." data-desc-position="top"><img alt="A screenshot of a dialog box AI-generated content may be incorrect." src="../assets/docx-image-034.png"></a></p>
+<p><strong>NOTE</strong>: You can ignore the warnings displayed for each setting.</p>
+<p>5. It will take you back to Settings page, leave <strong>Allow extension dialing between locations</strong> field (under Internal Dialing) Toggled ON. This setting controls if a user can dial between sites without using a site code, with preference being given to a local site match. We will look at this parameter in detail later! For now just make sure its toggled ON.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-035.png" data-desc-position="top"><img alt="" src="../assets/docx-image-035.png"></a></p>
+<p>This configures a dial plan for user extensions of 4YXXXX where 4Y is the site code, and XXXX is the last four digits of the full +E.164 number. It is still possible to configure user extensions with something like 8YXXX or 2YXXXXXXX with this setup. It is not recommended, but Webex calling will merely warn the administrator that a user’s extension is outside of the configured range but continue to route calls as best as it can. This caters for our variable length dial plan, as requested for this location. Note that Interdigit timeout delays can occur with variable length dial plans.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-036.png" data-title="A white rectangle with blue and orange border Description automatically generated" data-desc-position="top"><img alt="A white rectangle with blue and orange border Description automatically generated" src="../assets/docx-image-036.png"></a></p>
+<p>6. Now let's define the <strong>Routing Prefix</strong> for <strong>San Jose</strong> location. On <strong>Webex Control Hub</strong> go to <strong>MANAGEMENT</strong> &gt; <strong>Locations</strong>.</p>
+<p>7. On the locations page select location <strong>San Jose</strong>. On San Jose location page go to <strong>Calling</strong> tab. On the Calling tab go to <strong>Dialing</strong> &gt; <strong>Internal dialing</strong>.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-037.png" data-desc-position="top"><img alt="" src="../assets/docx-image-037.png"></a></p>
+<p>8. Configure <strong>Routing prefix</strong> as <strong>42</strong>. Observe the dialing preview changes to reflect 42-XXXX and click <strong>Save</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-038.png" data-desc-position="top"><img alt="" src="../assets/docx-image-038.png"></a></p>
+<p>9. Once you have added routing prefix, all users extension numbers location will be updated with respective routing prefix. To verify users extensions have been updated , on the Control Hub, go to <strong>SERVICES</strong> &gt; <strong>PSTN &amp; Routing</strong> and observe under <strong>Numbers</strong> tab that user extensions are updated with respective <strong>Route prefixes</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-039.png" data-desc-position="top"><img alt="" src="../assets/docx-image-039.png"></a></p>
+<h2 id="test-revised-dial-plan">1.5 Test Revised Dial Plan</h2>
+<p>1. From control hub, open PSTN &amp; Routing, Numbers tab, and take a note of the 6 and 7 digit extension numbers there for Charles and Anita<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-040.png" data-desc-position="top"><img alt="" src="../assets/docx-image-040.png"></a></p>
+<p>2. Open workstation 1 and dial Anita’s 7 digit extension. Confirm the call completes properly. Note the call now shows in call history with the full 7 digit extension.<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-041.png" data-desc-position="top"><img alt="" src="../assets/docx-image-041.png"></a></p>
+<p>3. <strong>Optional Step:</strong> Open Workstation 2 and complete the call in the other direction<br>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-042.png" data-desc-position="top"><img alt="" src="../assets/docx-image-042.png"></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../lab-access-2-minutes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Accessing Your Lab">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Accessing Your Lab
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lab-site-2-new-york-1-hour-15-minutes/" class="md-footer__link md-footer__link--next" aria-label="Next: New York">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                New York
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Cisco
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../template_assets/js/newLoad.js"></script>
+      
+        <script src="../template_assets/js/setInfo.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

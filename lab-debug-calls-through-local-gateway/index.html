@@ -1,0 +1,1170 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration">
+      
+      
+        <meta name="author" content="Carl Newton">
+      
+      
+      
+        <link rel="prev" href="../slido/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../template_assets/webex75.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Debug Local Gateway - PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-debug-calls-through-local-gateway" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" class="md-header__button md-logo" aria-label="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Debug Local Gateway
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-learning-objectives/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lab Preamble
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-access-2-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accessing Your Lab
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-1-san-jose-20-30-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  San Jose
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-2-new-york-1-hour-15-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  New York
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-3-dallas-20-30-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dallas
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab-site-4-london-30-minutes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  London
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slido/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lab Survey
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Bonus Content
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" class="md-nav__button md-logo" aria-label="PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    PTE26 | Advanced Webex Calling: Mastering Multi-Site Dial Plans and Cisco UCM Integration
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab Preamble
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lab Preamble
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-learning-objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mock Scenario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-access-2-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing Your Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-1-san-jose-20-30-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    San Jose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-2-new-york-1-hour-15-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New York
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-3-dallas-20-30-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dallas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-site-4-london-30-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    London
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab Survey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus Content
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bonus Content
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debug Local Gateway
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debug Local Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-1-tls-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B.1 Step 1 – TLS Registration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-sip-trunk-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B.2 Step 2 – SIP Trunk Registration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-dial-peer-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B.3 Step 3 – Dial Peer Selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-sip-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B.4 Step 4 – SIP Messages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#longer-extension-length-and-national-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B.5 Longer Extension length and National numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dial-plan-behavior-outside-access-codes-translation-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B.6 Dial Plan Behavior – Outside Access Codes &amp; Translation Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-debugging-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B.7 Useful Debugging Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-debug-calls-through-local-gateway">Lab Debug Calls through Local Gateway</h1>
+<p>This document will show you how to debug the calls through the local gateway and verify correct operation. Use this guide to troubleshoot your own implementations!</p>
+<h2 id="step-1-tls-registration">B.1 Step 1 – TLS Registration</h2>
+<p></p><div class="highlight"><pre><span></span><code>Show sip-ua connections tcp tls detail
+</code></pre></div>
+This will verify the TLS Connection between LGW And Webex calling. If you do not see an active connection, this is generally caused by certificate issues (Not loading the trust certs correctly) or by incorrect crypto configuration or network level firewall issues. If this step is not successful, you will never see any activity on the local gateway itself when trying to make a call.<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/bonus_docx-image-001.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/bonus_docx-image-001.png"></a></p>
+<h2 id="step-2-sip-trunk-registration">B.2 Step 2 – SIP Trunk Registration</h2>
+<p></p><div class="highlight"><pre><span></span><code>show sip-ua register status
+</code></pre></div>
+This will verify the SIP trunk between LGW and WxC is up. You can also check on control hub. A reg state of “no” usually indicates issues with configuration on the voice tenant – generally with incorrect credentials, realms, usernames etc. If this step is not successful, you will never see any activity on the local gateway itself when trying to make a call. You can use the command debug ccsip non-call to debug the registration operations.<p></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/bonus_docx-image-002.png" data-title="A black and white screen with red text Description automatically generated" data-desc-position="top"><img alt="A black and white screen with red text Description automatically generated" src="../assets/bonus_docx-image-002.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/bonus_docx-image-003.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/bonus_docx-image-003.png"></a></p>
+<h2 id="step-3-dial-peer-selection">B.3 Step 3 – Dial Peer Selection</h2>
+<p>With the above steps completed, the next step is to debug the dial peers on the gateway itself to see what is happening. Issue the command
+</p><div class="highlight"><pre><span></span><code>debug voip ccapi inout
+</code></pre></div><p></p>
+<p>This will enable debugging. You can either ensure Terminal monitor is enabled, and log your session output to a file – or you can set the following commands and use show log to see the output of your tests.
+</p><div class="highlight"><pre><span></span><code>conf t
+no logging console
+no logging monitor
+logging buffer 999999 debug
+end
+
+undebug all
+Debug voip ccapi inout
+</code></pre></div>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/bonus_docx-image-004.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/bonus_docx-image-004.png"></a><p></p>
+<p>Make a call out to pstn, and check the resulting log file. First, we want to look for some text like the below. Filter on the word “incoming” and ensure the correct dial peer is selected (In this case, 100) If it is not, check your incoming URI is correctly specifying the relevant DTG – Details on this below.</p>
+<div class="admonition code">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code>\Sep 16 12:40:18.572: //-1/AA290F15808C/CCAPI/cc\_api\_call\_setup\_ind\_common:
+Interface=0x7FE8742E8208, Call Info(
+Calling Number=12095550100,(Calling Name=)(TON=Unknown, NPI=Unknown, Screening=User, Passed, Presentation=Allowed),
+Called Number=13157244022(TON=Unknown, NPI=Unknown),
+Calling Translated=FALSE, Subscriber Type Str=Unknown, FinalDestinationFlag=TRUE,
+</code></pre></div>
+<p><b></b></p><b>
+<div class="highlight"><pre><span></span><code>Incoming Dial-peer=100, Progress Indication=NULL(0), Calling IE Present=TRUE,
+</code></pre></div>
+</b><p><b></b>
+</p><div class="highlight"><pre><span></span><code>Source Trkgrp Route Label=, Target Trkgrp Route Label=, CLID Transparent=FALSE), Call Id=208
+</code></pre></div><p></p>
+</div>
+<p>To check the correct DPG, enable debug ccsip messages and look for the following text in the inbound SIP invite, ensure it matches your voice class uri 100 sip configuration</p>
+<div class="admonition code">
+<p class="admonition-title">Code</p>
+<p>\Sep 16 12:40:18.567: //-1/xxxxxxxxxxxx/SIP/Msg/ccsipDisplayMsg:<br>
+Received:<br>
+INVITE sip:13157244022@198.18.133.227:5061;transport=tls;<text style="color:red;">dtg=site2_pstn0547184497_lgu</text> SIP/2.0</p>
+</div>
+<div class="highlight"><pre><span></span><code>voice class uri 100 sip
+pattern dtg=site2_pstn0547184497_lgu
+</code></pre></div>
+<p>With the correct inbound dial peer now selected, let’s check our outbound dial-peer. Look for the following messages in the debug</p>
+<div class="admonition code">
+<p class="admonition-title">Code</p>
+<p>\Sep 16 12:40:18.574: //208/AA290F15808C/CCAPI/ccCallSetupRequest:<br>
+Destination=, Calling IE Present=TRUE, Mode=0,<br>
+<text style="color:red;">Outgoing Dial-peer=900</text>, Params=0x7FE80D9C7CE8, Progress Indication=NULL(0)</p>
+</div>
+<p>If you do not see it, check the configuration of your inbound dial peer has the DPG Set, and the DPG Specifies the outgoing dial peer of 900. This ensures that any calls coming in to dial-peer 100 will automatically be pushed to dial-peer 900 regardless of the digits dialed. The important parts are highlighted in red.</p>
+<pre><code>
+<text style="color:red;">voice class dpg 100
+description INCOMING FROM WXC OUT TO PSTN</text>
+
+dial-peer 900 preference 1
+dial-peer voice 100 voip
+description Inbound/Outbound Webex Calling
+max-conn 250
+destination-pattern BAD.BAD
+session protocol sipv2
+session target sip-server
+<text style="color:red;">destination dpg 100</text>
+incoming uri request 100
+voice-class codec 100
+voice-class stun-usage 100
+no voice-class sip localhost
+voice-class sip tenant 100
+dtmf-relay rtp-nte
+srtp
+no vad
+
+<text style="color:red;">
+dial-peer voice 900 voip
+description OUTBOUND PSTN PROVIDER
+destination-pattern BAD.BAD
+session protocol sipv2
+session target ipv4:198.18.133.3
+voice-class codec 100
+dtmf-relay rtp-nte
+no vad</text>
+</code></pre>
+
+<p>Once we have confirmed correct dial-peer selection, we can move on to SIP message debugging.</p>
+<h2 id="step-4-sip-messages">B.4 Step 4 – SIP Messages</h2>
+<p>The final stage is the ensure the correct SIP Messages are being exchanged. For this, it’s useful to use a tool called translatorX <a href="https://translatorx.org/downloads.html">https://translatorx.org/downloads.html</a></p>
+<p>Leave your Putty session logging all session output to a file, and enable the debug command Debug ccsip messages</p>
+<p>Make an outbound call to PSTN and hang up. Now copy the text from the log file into translatorX, or drag the file and drop it into the translatorX window. You will see the SIP Messages represented on screen. Below is an example of a failing call scenario. We can see some looping of messaging going on.  </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/bonus_docx-image-005.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/bonus_docx-image-005.png"></a></p>
+<p>If you click the “Generate diagram” button in the bottom right, we can see a graphical representation of the call flow, where we can start to see what messages are being sent, and from where more easily. This will assist in debugging / troubleshooting issues.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/bonus_docx-image-006.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/bonus_docx-image-006.png"></a></p>
+<h2 id="longer-extension-length-and-national-numbers">B.5 Longer Extension length and National numbers</h2>
+<div class="admonition curious">
+<p class="admonition-title">Curious</p>
+<p>With the inclusion of Extensions up to 10 digits, the chance for overlap on National PSTN numbering becomes more prevalent.​ If the extension exists on Webex Calling, the call will route to the extension number instead of PSTN. If the extension number exists over a Local Gateway trunk on UCM or similar, the call will route to PSTN instead of the extension number. Be aware the behaviour changes depending where the number resides!</p>
+</div>
+<p>Outbound - If an extension is same as the national number, then the extension takes precedence over the national number. Hence, we recommend that you enable the outbound dial digit to guarantee PSTN egress, as a defined extension could overlap with a “real” Telephone number. See <a href="https://help.webex.com/en-us/article/pxtu15/Configure-your-Webex-Calling-dial-plan">Outbound Dial Digit and Permissive dialing</a>.​
+ Inbound – Extensions cannot be used as destinations for inbound PSTN but Webex Calling does provide normalization for some country dial plans to convert a national number to a E164, e.g. US national 10 digit number. If longer extension lengths are used this could conflict with the PSTN dial plan and provide incorrect call classification and failure. In this scenario:​
+   PSTN inbound must be normalized to E164 inbound to Webex Calling. This is done automatically by Cloud Connected PSTN.​
+   For LGW and Unknown routing to Premise enabled on a Trunk, a large extension length could lead to incorrect Call Classification of Premises and External Calls if E164 is not used for PSTN To and From. See <a href="https://help.webex.com/en-us/article/n0xb944/Configure-trunks,-route-groups,-and-dial-plans-for-Webex-Calling#Cisco_Task_in_List_GUI.dita_fe608e1f-2f05-4369-b758-4b1874b31a3c">Calls to On-Premise Extensions Maximum Unknown Extension Length</a></p>
+<h2 id="dial-plan-behavior-outside-access-codes-translation-patterns">B.6 Dial Plan Behavior – Outside Access Codes &amp; Translation Patterns</h2>
+<p>Consider the below diagram. Note that translation patterns will not be considered if the outbound dial digit has been previously stripped. As such, you should not translate from numbers, and to numbers that both include an outbound dial digit, as it only gets stripped once.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/bonus_docx-image-007.png" data-title="A diagram of a process Description automatically generated" data-desc-position="top"><img alt="A diagram of a process Description automatically generated" src="../assets/bonus_docx-image-007.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/bonus_docx-image-008.png" data-title="A screenshot of a diagram Description automatically generated" data-desc-position="top"><img alt="A screenshot of a diagram Description automatically generated" src="../assets/bonus_docx-image-008.png"></a></p>
+<h2 id="useful-debugging-commands">B.7 Useful Debugging Commands</h2>
+<div class="admonition code">
+<p class="admonition-title">Code</p>
+<p>Show sip-ua connections tcp tls detail<br>
+Displays status of TCP connection<br>
+Show sip-ua register status<br>
+Displays status of SIP Trunks over TCP connection<br>
+Debug ccsip messages<br>
+Debugs SIP messages<br>
+Debug voice ccapi inout<br>
+Debugs dial-peer matching logic<br>
+Show voip ice summary<br>
+Short summary of ICE sessions<br>
+Show voip ice instance call-id XXXXXX<br>
+Detailed info on ICE Sessions<br>
+Show sip-ua calls brief<br>
+Shows info on active calls, including media IP’s for ICE troubleshooting<br>
+Debug voip icelib inout<br>
+Debug ICE Negotiations<br></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../slido/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab Survey">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Lab Survey
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Cisco
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../template_assets/js/newLoad.js"></script>
+      
+        <script src="../template_assets/js/setInfo.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
