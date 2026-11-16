@@ -314,6 +314,13 @@ P_CloudPSTN, Partition for Cloud PSTN Calls
 24\. Adjust the parameters as follows ensuring the highlighted areas match the image. Click Save and OK on the subsequent two screens.  
 ![](assets/docx-image-093.png)
 
+!!! info
+      This diagram shows how the outbound call flow works in this hybrid PSTN scenario. Kellie's call starts in UCM, goes over the trunk to the local gateway, then into Webex Calling on the IntCal trunk, and out through New York's Cloud Connect PSTN connection.
+
+      Webex Calling only treats this as Kellie's own call, and lets it reach the PSTN, because her number is in a route list. You'll create that route list in the next few steps.
+
+      ![Hybrid PSTN outbound call flow from a UCM user to the PSTN](assets/diagrams/hybrid-pstn-01-outbound.png)
+
 25\. Now, we need to configure control hub to send calls inbound from Cloud PSTN over the trunk to UCM to route to Kellie. From control hub, Navigate to **PSTN & Routing > Gateway Configurations > Route Lists**. Click on **Create Route List**
 ![](assets/docx-image-094.png)
 
@@ -322,6 +329,13 @@ P_CloudPSTN, Partition for Cloud PSTN Calls
 
 27\. You will be presented with a screen to add PSTN DID’s to the route list. Select the one that you have available – This tells Webex Calling to send this number over the trunk to UCM. You can add up to 100 numbers at a time manually, and it is also possible to add them in bulk via CSV. **Add your number and click Add**  
 ![](assets/docx-image-096.png)
+
+!!! info
+      This diagram shows how the inbound call flow works in this hybrid PSTN scenario. Webex Calling finds Kellie's number in the route list you just created and sends the call over the IntCal trunk to the local gateway. The local gateway passes it to UCM, which searches the trunk's inbound calling search space to find her directory number.
+
+      The inbound calling search space shown here is the one you'll set up later, in section 2.3.2. Until then, the trunk's existing calling search space already reaches Base_PT, so the call still rings Kellie.
+
+      ![Hybrid PSTN inbound call flow from the PSTN to a UCM user](assets/diagrams/hybrid-pstn-02-inbound-pstn.png)
 
 ### 2.2.4 Configure Site Routing Prefix {: #configure-site-routing-prefix }
 
@@ -527,6 +541,10 @@ Inbound_Site_Xlat, Inbound Site Translations
 17\. Configure it with the settings as pictured below.
 !!! curious
       The goal of this translation pattern is to catch any inbound call from the local gateway that has a destination of four digits. We then **Route next hop by calling party number** which will match based on the callers number. The next step is to implement a logic of “If a caller calls four digits from +1-123-456-7890 then they are a member of the New York Site, so translate to 43XXXX. If they call from +1-456-789-1234 they are a member of the San Jose site, so translate to 42XXXX”  
+      
+      The diagram below shows the whole flow once both translation patterns are in place: this catch-all pattern, and the New York pattern you'll add in the next step.
+      
+      ![4-digit call from Webex Calling to a UCM user, routed on the caller's number](assets/diagrams/hybrid-pstn-03-inbound-4-digit.png)
 Once you have populated the details, click **Save**
 
 ![](assets/docx-image-121.png)
