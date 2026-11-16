@@ -256,10 +256,10 @@ Now we must check the trunk on Cisco UCM side to route calls between our on prem
 8\. Change all fields on the page that specify Taylor Bard to read Kellie Melby, and save the config.  
 ![](assets/docx-image-077.png)
 
-9\. Next, add click the “**Add** **Enterprise Alternate Number**” button and use a number mask of 43**YYYY** – Where YYYY is the last four digits of **Charles Hollands number.** We are configuring a simulated extension number overlap here between a UCM User and a Webex Calling user, which we will test later. This isn't really a real world scenario; we are artificially forcing an extension number overlap situation where one doesn't exist just to teach you about overlap handling.  The real world scenario for this excercise would be two users that have different +E.164 DDI's that have the same last four digits. We cannot force that situation in this lab with the PSTN resources we have, so we are just forcing them to share an extension artificially. Remember to set your Route Partition too!  
+9\. Next, add click the “**Add** **Enterprise Alternate Number**” button and use a number mask of 43**YYYY** – Where YYYY is the last four digits of **Charles Hollands number.**   
 
 !!! important
-      You must switch out the XXXX in the screenshot below when you configure this Enterprise Alternate number! Do not just type X's into the box, switch out the X's to **Match the last four digits of Charles full number** 
+      We are configuring a simulated extension number overlap here between a UCM User and a Webex Calling user, which we will test later. This isn't really a real world scenario; we are artificially forcing an extension number overlap situation where one doesn't exist just to teach you about overlap handling.  The real world scenario for this excercise would be two users that have different +E.164 DDI's that have the same last four digits. We cannot force that situation in this lab with the PSTN resources we have, so we are just forcing them to share an extension artificially. Remember to set your Route Partition too! You must switch out the XXXX in the screenshot below when you configure this Enterprise Alternate number! Do not just type X's into the box, switch out the X's to **Match the last four digits of Charles full number** 
       
 ![](assets/image-2.png)
 
