@@ -1,6 +1,6 @@
 # Lab Guide for PVT Lisbon 2026 Lab LAB-31056
 
-Web guide link: https://canewton-ccep.github.io/PVT-Lisbon-Dial-Plan-Lab/
+Web guide link: https://canewton-ccep.github.io/PTE-Lisbon-Dial-Plan-Lab/
 
 
 ## DOCX to Markdown script
