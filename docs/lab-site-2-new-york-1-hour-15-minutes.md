@@ -120,7 +120,7 @@ show sip-ua connection tcp tls detail
 
 ![](assets/docx-image-057.png)
 
-6\. You should see an active TLS connection established. The 150.X.X.X subnet belongs to Webex.
+6\. You should see an active TLS connection established. The remote agent subnet belongs to Webex - 150.x.x.x in the example above, but yours may be different.
 
 7\. Now issue the following command, and check the registration is shown as ***yes***  
     
@@ -143,7 +143,7 @@ show sip-ua register status
      
 ![](assets/docx-image-060.png)
 
-2\. Name it RG\_Internal – When we ran the powershell script earlier, a new trunk was created in control hub via automation named IntCal. We need to add this newly created trunk to the route group by dropping down the list and selecting it.  
+2\. Name it RG\_Internal – When we ran the powershell script earlier, a new trunk was created in control hub via automation named IntCal. We need to add this newly created trunk to the route group by dropping down the list and selecting it.  Click **save**
      
 ![](assets/docx-image-061.png)
 
@@ -158,7 +158,7 @@ This completes the Webex Calling side config of the trunk for internal calls.
 
 Now we must check the trunk on Cisco UCM side to route calls between our on premise solution and Webex Calling solution. This trunk on Cisco UCM is already created for you to save time, but we will observe the important settings.
 
-1\. Continuing on Workstation, bring up Chrome browser. On the browser open a new tab and navigate to **Collaboration Admin Links** > **Cisco Unified Communications Manager**. Log in with the credentials **administrator** and **dCloud123!**
+1\. Continuing on Workstation 1, bring up Chrome browser. On the browser open a new tab and navigate to **Collaboration Admin Links** > **Cisco Unified Communications Manager**. Log in with the credentials **administrator** and **dCloud123!**
 
 2\. Once logged in, go to **System** > **Security** > **SIP Trunk Security Profile**.   
 ![](assets/docx-image-062.png)
@@ -247,13 +247,16 @@ Now we must check the trunk on Cisco UCM side to route calls between our on prem
 6\. Now click on line 1 – 6026 in Base\_PT  
 ![](assets/docx-image-075.png)
 
-7\. Adjust the directory number to match the full +E.164 you have for this site in control hub. Ensure you prefix it with a \ character. Tab out of the field, and allow the page to refresh.  
+7\. Adjust the directory number to match the full +E.164 you have for her in control hub. Ensure you prefix it with a \ character. Tab out of the field, and allow the page to refresh.  
+!!! important
+      The order of clicks here really matters. First, click into the directory number box.  Change it as instructed above, and tab out of the directory number box or click some white space on the web page.  You will see the page flash as UCM checks for any other places that DN is assigned.  **Do not** just change the number and click save without tabbing out of the box or the number will not be assigned properly.  The route partition should remain as Base_PT after you tab out of the box.
+      
 ![](assets/docx-image-076.png)
 
 8\. Change all fields on the page that specify Taylor Bard to read Kellie Melby, and save the config.  
 ![](assets/docx-image-077.png)
 
-9\. Next, add click the “**Add** **Enterprise Alternate Number**” button and use a number mask of 43**YYYY** – Where YYYY is the last four digits of **Charles Hollands number.** We are configuring a simulated extension number overlap here between a UCM User and a Webex Calling user, which we will test later. Remember to set your Route Partition too!  
+9\. Next, add click the “**Add** **Enterprise Alternate Number**” button and use a number mask of 43**YYYY** – Where YYYY is the last four digits of **Charles Hollands number.** We are configuring a simulated extension number overlap here between a UCM User and a Webex Calling user, which we will test later. This isn't really a real world scenario; we are artificially forcing an extension number overlap situation where one doesn't exist just to teach you about overlap handling.  The real world scenario for this excercise would be two users that have different +E.164 DDI's that have the same last four digits. We cannot force that situation in this lab with the PSTN resources we have, so we are just forcing them to share an extension artificially. Remember to set your Route Partition too!  
 
 !!! important
       You must switch out the XXXX in the screenshot below when you configure this Enterprise Alternate number! Do not just type X's into the box, switch out the X's to **Match the last four digits of Charles full number** 
@@ -495,7 +498,9 @@ Earlier we configured Kellie to have extension number overlap with a user on Web
 ![](assets/docx-image-112.png)
 
 9\. Configure it as follows and click **Save**
-
+```
+Inbound_Site_Xlat, Inbound Site Translations
+```
 ![](assets/docx-image-113.png)
 
 10\. Click on **Call Routing > Class Of Control > Calling Search Space** and add a new one.
@@ -539,6 +544,9 @@ Once you have populated the details, click **Save**
 ![](assets/docx-image-123.png)
 
 2\. Add a new partition as follows  
+```
+Hidden,Undialable Partition For Migrated Users
+```
 ![](assets/docx-image-124.png)
 
 3\. Open **Call Routing > Route Plan Report**
@@ -844,7 +852,7 @@ terminal monitor
 
 ```
 voice class uri 101 sip
-pattern 198\.18\.133\..\*:5065
+pattern 198\.18\.133\..*:5065
 ```
 
 11\. Press q to exit out of the configuration display mode. Issue the commands below and press enter after each one  

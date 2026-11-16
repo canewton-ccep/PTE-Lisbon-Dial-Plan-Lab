@@ -44,7 +44,8 @@ To access Workstation 1 over **WebRDP**, click on the **Workstation 1** icon on 
 
 ![](assets/docx-image-006.png)
 
-10\. For this lab all this information is compiled and put on ***ALL*** the workstations in a file named Session\_Info.txt. You will use this information throughout the lab from respective workstation of each module.
+## 0.2.4 Lab Session Info
+Once connected via either method, all this information is compiled and put on ***ALL*** the workstations in a file named Session\_Info.txt. You will use this information throughout the lab from respective workstation of each module.
 
 ![](assets/docx-image-007.png)
 

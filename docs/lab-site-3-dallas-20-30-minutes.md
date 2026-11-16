@@ -33,7 +33,7 @@ Now it will give you PSTN configuration options. Click **Manage** for PSTN Confi
 
 6\. On the next page, Click **Add Numbers now.** Make sure Location has been selected as **Dallas** and the Number type is selected as **PSTN number** and click **Next**.
 
-7\. On the next page will need to enter the PSTN numbers for the location, minimize the browser (and other applications), and on the desktop find the TEXT file named **DID\_Numbers.txt.** 
+7\. On the next page will need to enter the PSTN numbers for the location, minimize the browser (and other applications), and on the desktop of workstation 1 find the TEXT file named **DID\_Numbers.txt.** 
 !!! important
       Be careful not to open the file DID\_Numbers\_LON.txt!
  It will have some DID Numbers (Fake) pregenerated for you to use in this lab. Select all of them, copy and paste them into **Enter phone numbers** field on Control Hub as shown below. Some Numbers might be marked in Red; this is because that number is either already used or taken by someone else within Webex Calling. You can remove all those numbers marked in Red by clicking the cross button next to them, or by clicking the **Clear Errors** button. Click **Save**.
@@ -229,10 +229,10 @@ show sip-ua register status
 
 3\. Open the local gateway via Putty and log in. The IP is 198.18.133.227 username admin password dCloud123!  
    Issue the show run command and scroll using space bar until you see the configuration that looks something like the below. The red part will change in your deployment. This command identifies the trunk we configured earlier.  
-```  
+<pre><code> 
 voice class uri 201 sip
-pattern dtg=us.pstn0710039444.lgu
-```
+pattern dtg=<text style="color:red;">us.pstn0710039444.lgu</text>
+</code></pre>
   
 ![](assets/docx-image-219.png)
 

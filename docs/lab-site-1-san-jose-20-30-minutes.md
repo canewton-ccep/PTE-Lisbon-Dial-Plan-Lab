@@ -14,7 +14,7 @@
 
 2\. Open Chrome browser from the taskbar. There is also a file on the desktop named “Session\_info.txt”; Open it up now.
 
-3\. From the browser home Page, select **Cisco Webex Links** > **Cisco Webex Control Log in with **cholland@cbXXX.dc-YY.com** and **dCloud*AAAA*!.** Accept all security warnings and welcome prompts! You need to Replace **XXX, YY** and **YYYY** with your session-specific details. Credentials for your session are located in text file Session_Info.txt on Workstation Desktop.
+3\. From the browser home Page, select **Cisco Webex Links** > **Cisco Webex Control Hub in with **cholland@cbXXX.dc-YY.com** and **dCloud*AAAA*!.** Accept all security warnings and welcome prompts! You need to Replace **XXX, YY** and **YYYY** with your session-specific details. Credentials for your session are located in text file Session_Info.txt on Workstation Desktop.
 
    ![](assets/docx-image-009.png)
    
@@ -28,13 +28,13 @@
 
 ![](assets/docx-image-011.png)
 
-7\. On San Jose location page go to **PSTN** tab. Select **Configure PSTN Services**.
+7\. On San Jose location page go to **PSTN** tab. 
 
 ![](assets/docx-image-012.png)
 
-8\. Click **Manage** for PSTN Configuration > PSTN connection.
+8\. Select **Configure PSTN Services**.
 
-![](assets/docx-image-013.png)
+![](assets/docx-image-012.png)
 
 9\.  It will take you to set up PSTN connection type for the **San Jose**. On the **Edit PSTN connection for San Jose** page keep the option selected for **Cisco Calling Plans (CCP)** and select **Next**.
 

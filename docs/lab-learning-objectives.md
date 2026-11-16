@@ -1,6 +1,6 @@
 # 0.1 Lab Learning Objectives {: #lab-learning-objectives }
 
-This lab will take you through the setup of four sites with slightly different requirements when it comes to calling. The goals are taken from common customer calling requirements, and you will learn how to configure them in Webex calling MT. Users at this mock company expect to be able to dial each other, and to the PSTN using the same habits they have on their previous system. This lab deals with how to configure those new sites, local gateways, and the resulting dial plan settings to translate and block numbers, route calls correctly, and troubleshoot / test the configurations using built in control hub tools.
+This lab will take you through the setup of four sites with slightly different requirements when it comes to calling. The goals are taken from common customer calling requirements, and you will learn how to configure them in Webex calling Multi-Tenant(MT) and Cisco Unified Communications Manager (CUCM/UCM). Users at this mock company expect to be able to dial each other, and to the PSTN using the same habits they have on their previous system. This lab deals with how to configure those new sites, local gateways, and the resulting dial plan settings to translate and block numbers, route calls correctly, and troubleshoot / test the configurations using built in control hub tools.
 
 ## 0.1.1 Dialing habits required [2 Minutes] {: #dialing-habits-required-2-minutes }
 
