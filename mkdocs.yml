@@ -94,6 +94,6 @@ nav:
   - New York: lab-site-2-new-york-1-hour-15-minutes.md
   - Dallas: lab-site-3-dallas-20-30-minutes.md
   - London: lab-site-4-london-30-minutes.md
-  - Lab Survey: slido.md
+  # - Lab Survey: slido.md
   - Bonus Content:
     - Debug Local Gateway: lab-debug-calls-through-local-gateway.md
