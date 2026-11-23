@@ -334,10 +334,10 @@ terminal monitor
 This concludes the lab activity! We know this was a tough lab with new concepts, so congratulations for reaching the end! This is a brand new session and we would like to improve and repeat it at future events – so please remember to rate the session positively if you enjoyed it; and feel free to give us feedback directly if you have suggestions.
 
 <!-- PLACEHOLDER: replace SLIDO-PLACEHOLDER-REPLACE-ME with the Lisbon PVT Slido event ID (QR code image assets/image-1.png still points to the WebexOne survey) -->
-Please fill out the [Slido Survey](https://app.sli.do/event/SLIDO-PLACEHOLDER-REPLACE-ME) to rate the session! It really helps us to plan events and improve our content.  You can also scan the QR code below with your mobile device to fill out the survey on the go!
+<!-- Please fill out the [Slido Survey](https://app.sli.do/event/SLIDO-PLACEHOLDER-REPLACE-ME) to rate the session! It really helps us to plan events and improve our content.  You can also scan the QR code below with your mobile device to fill out the survey on the go!
 
 
 ![alt text](assets/image-1.png)
-
+-->
 !!! challenge
       If you still have time, try out the bonus content for extra learning!
