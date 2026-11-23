@@ -23,7 +23,7 @@ A Webex Calling trunk connects your Local Gateway to Webex. There are 2 types of
 * Certificate-based trunk
 
 !!! important
-            In this lab activity, we will focus on the Registration-based model. In the interests of reducing the time taken and complexity of the lab, we will be using 3 Webex Calling registration based trunks. The maximum in production is 2 Webex Calling register trunks per CUBE platform. If you wish to have more than 2 trunks, you should use the Certificate based model, which supports up to 10.
+      In this lab activity, we will focus on the Registration-based model. In the interests of reducing the time taken and complexity of the lab, we will be using 3 Webex Calling registration based trunks. The maximum in production is 2 Webex Calling register trunks per CUBE platform. If you wish to have more than 2 trunks, you should use the Certificate based model, which supports up to 10.
 
 These are the main differences between the two models.
 
