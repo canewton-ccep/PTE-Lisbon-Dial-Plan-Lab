@@ -334,6 +334,10 @@ P_CloudPSTN, Partition for Cloud PSTN Calls
 ![](assets/docx-image-095.png)
 
 27\. You will be presented with a screen to add PSTN DID’s to the route list. Select the one that you have available – This tells Webex Calling to send this number over the trunk to UCM. You can add up to 100 numbers at a time manually, and it is also possible to add them in bulk via CSV. **Add your number and click Add**  
+
+!!! important
+      Webex Calling by default does not allow PSTN Calls to transit through it; So by default a call from a Cloud Connected PSTN provider destined for UCM will be blocked.  It is the **Route List** Configuration here that makes Webex allow PSTN Calls to transit across it; So the numbers you add in this section must be the numbers assigned to users on UCM or they will not be able to make or receive PSTN Calls, and the gateway will show a 604 error. 
+      
 ![](assets/docx-image-096.png)
 
 !!! info
