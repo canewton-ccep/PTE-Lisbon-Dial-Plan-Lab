@@ -73,6 +73,9 @@ NOTE: Make sure you replace XXX and YY values from Session\_Info.txt file on Wor
 
 19\. On the next page, keep the **State/Province/Region** selected for **California**. Drop down the option for **Area Code** and choose any of the area codes available. For How many numbers do you want to auto-selected for you? enter ***3*** and click **Search.**
 
+!!! info
+   The screenshot below shows area code values, you may have different options available.  Choose any that you have available; They do not have to be the same as the screenshot examples.
+
 ![](assets/docx-image-017.png)
 
 20\. On the next page, Control Hub will select 3 numbers for you. Click **Order**.
