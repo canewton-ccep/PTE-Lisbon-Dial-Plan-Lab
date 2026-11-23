@@ -4,9 +4,14 @@
 !!! info
       This site is similar to Site 1, aside from that PSTN is accessed through the Cloud Connect For Webex Calling PSTN Type. This sends PSTN calls out through providers that partner with Webex. The site recently moved away from a centralized CUBE for PSTN Access as part of a modernization effort to move to the cloud. The CUBE still exists at this site and centralizes PSTN for other locations that have not moved yet; as well as providing internal calling between the legacy UCM And Webex Calling.
 
-      All PSTN connections at this site have been migrated to be delivered via cloud connect PSTN to Webex Calling, however, some users are still yet to be migrated from UCM and are still using Jabber registered to UCM. Calls will flow through Webex Calling, through the CUBE and on to UCM Registered users. We will migrate one such user from UCM Registration to Webex Calling registration during this section. Study the diagram below, and notice there are two PSTN Paths – one terminating at UCM users, one terminating at Webex Users.
-
 ![New York call paths](assets/diagrams/02-new-york-call-paths.png)
+
+!!! important
+      All PSTN connections at this site have been migrated to be delivered via cloud connect PSTN to Webex Calling, however, some users are still yet to be migrated from UCM and are still using Jabber registered to UCM. Calls will flow through Webex Calling, through the CUBE and on to UCM Registered users. We will migrate one such user from UCM Registration to Webex Calling registration during this section. Study the diagram below, and notice there are two PSTN Paths – one terminating at UCM users, one terminating at Webex Users.
+      
+      ![Hybrid PSTN call paths for New York UCM users](assets/diagrams/03-hybrid-pstn-call-paths.png)
+      
+
 
 Local Gateway enables the connection between Webex Calling and on-premises infrastructure and/or PSTN providers physically delivered to the premises - this solution is also known as Premises-based PSTN – But it can be used for PSTN or internal calling. The picture below depicts such deployment:
 
