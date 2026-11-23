@@ -1,0 +1,360 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+    .md-container {
+        height: 100%;
+        background: var(--md-primary-fg-color);
+        /* background-image: url("template_assets/bgTest.gif"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .md-main {
+        flex-grow: 0;
+        height: 0px;
+        background: var(--md-primary-fg-color)
+    }
+
+    .md-main__inner {
+        display: flex;
+        height: 100%;
+    }
+
+    .tx-container {
+        padding-top: .0rem;
+        /* background: var(--md-primary-fg-color); */
+        /* background-image: url("template_assets/bgTest.gif"); */
+        /* PVT Lisbon: team photo with a dark navy overlay so the white title + logo stay readable */
+        background-color: #0b1530;
+        background-image:
+            radial-gradient(ellipse at center, rgba(6, 14, 36, 0.55) 0%, rgba(6, 14, 36, 0.25) 75%),
+            linear-gradient(rgba(6, 14, 36, 0.55), rgba(6, 14, 36, 0.55)),
+            url("template_assets/pvt_lisbon_bg.jpg");
+        background-size: cover, cover, cover;
+        background-position: center, center, center 45%;
+        background-repeat: no-repeat;
+
+    }
+
+    .tx-container .md-grid {
+        max-width: min(96vw, 1800px);
+    }
+
+    @media screen and (min-width: 120em) {
+        .tx-container .md-grid {
+            max-width: min(94vw, 2100px);
+        }
+    }
+
+    @media screen and (min-width: 160em) {
+        .tx-container .md-grid {
+            max-width: min(92vw, 2400px);
+        }
+    }
+
+    .tx-hero {
+        margin: 32px 2.8rem;
+        color: var(--md-primary-bg-color);
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .tx-hero h1 {
+        margin-bottom: 1rem;
+        color: currentColor;
+        font-weight: 700;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85), 0 0 18px rgba(0, 0, 0, 0.6);
+    }
+
+    .tx-hero__content {
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tx-hero__logo {
+        scale: 1;
+        width: 65%;
+        padding-bottom: 50px;
+    }
+
+    .tx-hero__image {
+        width: min(88vw, 980px);
+        aspect-ratio: 16 / 10;
+        height: auto;
+        order: 0;
+        position: relative;
+        opacity: 1;
+    }
+
+    .tx-hero__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .tx-hero .md-button {
+        margin-top: .5rem;
+        margin-right: .5rem;
+        color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button--primary {
+        background-color: var(--md-primary-bg-color);
+        color: rgb(0, 0, 0);
+        border-color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button:focus,
+    .tx-hero .md-button:hover {
+        background-color: var(--md-accent-fg-color);
+        color: var(--md-default-bg-color);
+        border-color: var(--md-accent-fg-color)
+    }
+
+    .feature-item h2 svg {
+        height: 30px;
+        float: left;
+        margin-right: 10px;
+        transform: translateY(10%);
+    }
+
+    .top-hr {
+        margin-top: 42px;
+        background: var(--md-primary-fg-color)
+    }
+
+    .feature-item {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        box-sizing: border-box;
+        padding: 0 15px;
+        word-break: break-word
+    }
+
+    .feature-item h2 {
+        color: var(--md-default-fg-color);
+        font-weight: 300;
+        font-size: 25px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: normal;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: inherit;
+    }
+
+    .feature-item p {
+        font-size: 16px;
+        line-height: 1.8em;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        color: var(--md-default-fg-color);
+        margin: 0 0 10px;
+        display: block;
+    }
+
+    .feature-item path {
+        fill: var(--md-default-fg-color);
+    }
+
+    @media screen and (max-width:30em) {
+        .tx-hero h1 {
+            font-size: 1.4rem
+        }
+    }
+
+    @media screen and (min-width:60em) {
+        .md-sidebar--secondary {
+            display: none
+        }
+
+        .tx-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tx-hero__content {
+            /* max-width: 22rem; */
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+            margin-left: 1.0rem;
+            margin-right: 4.0rem;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width:76.25em) {
+        .md-sidebar--primary {
+            display: none
+        }
+
+        .top-hr {
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .bottom-hr {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 0;
+        }
+    }
+
+    @media screen and (min-height: 950px) {
+        .tx-container {
+            min-height: calc(100svh - 3.2rem);
+        }
+    }
+
+    @media screen and (min-width: 1200px) and (max-height: 960px) {
+        .tx-hero {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tx-hero__content {
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .hr {
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .text-center {
+        text-align: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+        font-family: 'Lato', sans-serif;
+        font-size: 23px;
+        font-weight: 300;
+        padding-bottom: 10px;
+    }
+
+    .logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+
+    .logos img {
+        flex: 1 1 auto;
+        padding: 25px;
+        max-height: 130px;
+        vertical-align: middle;
+    }
+
+    .hr-logos {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .md-footer-meta__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 1.0rem;
+    }
+
+    .md-footer-social {
+        padding-top: 20px;
+    }
+
+    .event {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: min(72%, 610px);
+        height: auto;
+    }
+
+    .event img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 14px rgba(0, 0, 0, 0.6));
+    }
+
+</style>
+
+<!-- Main site Entry button descriptions -->
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+
+            <div class="tx-hero__content">
+                <!-- <div class="tx-hero__logo">
+                    <img src="template_assets/logo.png" draggable="false">
+                </div> -->
+                <h1>
+                    <script>
+                        var title = document.querySelector('meta[name="description"]').content
+                        const lab = title
+                        // .split(" ")[0]
+                        document.write(lab)
+                    </script>
+                </h1>
+                <div class="tx-hero__image">
+
+                   
+                    <!-- <img src="template_assets/webex-3d-symbol-color(1).png" draggable="false"> -->
+                    <div class="event"><img src="template_assets/pvt_lisbon_26_text.svg" draggable="false"></div>
+                    <!-- <div id="five" class="hold event">{{config.extra.site_event}}</div> -->
+
+                </div>
+                <!-- <p>
+                    <script>
+                        const descr = title.substring(title.indexOf(" ") + 1)
+                        document.write(descr)
+                    </script>
+                </p> -->
+                <div><a href="lab-learning-objectives/" title="{{ page.next_page.title | striptags }}"
+                        class="md-button md-button--primary">
+                        Get started
+                    </a></div>
+                    <!-- <div><a href="welcome/" title="{{ page.next_page.title | striptags }}"
+                        class="md-button md-button--primary">
+                        Get started
+                    </a></div> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+{% block content %} {% endblock %}
+{% block footer %} {% endblock %}
